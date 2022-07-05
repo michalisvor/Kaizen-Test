@@ -21,7 +21,7 @@ class APIResponseSportEvent: Codable {
     var eventId: String?
     var sportId: String?
     var eventName: String?
-    var eventStartTime: String?
+    var eventStartTime: TimeInterval?
     
     enum CodingKeys: String, CodingKey {
         case eventId = "i"

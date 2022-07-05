@@ -12,4 +12,16 @@ protocol DashboardViewType: ViewType {
 
 extension DashboardViewType {
 
+    func createDataModel(with sports: [APIResponseSport]) {
+        var items: [IndexPathSectionItem] = []
+        
+        for sport in sports {
+            let headerItem = IndexPathSectionItem(identifier: "\(items.count)", rowHeight: 40, data: sport, children: [])
+            items.append(headerItem)
+        }
+        
+        dataModel = IndexPathDataModel(sectionItems: items)
+        tableView.registerAll(from: dataModel)
+        tableView.reloadData()
+    }
 }

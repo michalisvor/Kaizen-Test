@@ -17,6 +17,7 @@ class DashboardViewController: UIViewController, ControllerType {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        presenter.getEvents()
     }
    
     private func setUp() {
@@ -43,8 +44,18 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let data = dataModel.section(atSectionIndex: section).data as? APIResponseSport else { return nil }
+        let headerView = EventCategoryHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: tableView.sectionHeaderHeight))
+        headerView.setUp(title: data.sportName)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        // Add a safety guard to prevent wrong height if something may change in the future and data isnt APIResponseSport type
+        // In viewForHeaderInSection we check for APIResponseSport type or returning nil so the height must be 0.
+        guard dataModel.section(atSectionIndex: section).data as? APIResponseSport != nil else { return 0 }
+        return dataModel.section(atSectionIndex: section).rowHeight
     }
 }
 

@@ -15,7 +15,10 @@ class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // TODO: Just for testing - remove it later
+        Thread.sleep(forTimeInterval: 2)
         let controller = DashboardViewController.instanceInNavController()
         self.navigationController?.pushViewController(controller.controller, animated: true)
     }
+
 }

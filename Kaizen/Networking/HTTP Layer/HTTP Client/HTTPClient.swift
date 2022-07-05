@@ -56,9 +56,10 @@ extension HTTPClient {
                 case .success(let data):
                     let decoder = JSONDecoder()
                     do {
-                        let response: [T] = try decoder.decode([T].self, from: data)
-                        print(response.toJsonFormmated())
-                        aResolver.fulfill(response)
+                        let response: [T?]? = try decoder.decode([T?]?.self, from: data)
+                        let strongResponse = (response ?? []).compactMap({ $0 })
+                        print(strongResponse.toJsonFormmated())
+                        aResolver.fulfill(strongResponse)
                     } catch {
                         aResolver.reject(error)
                     }

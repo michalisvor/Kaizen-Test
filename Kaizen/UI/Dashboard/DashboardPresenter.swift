@@ -11,6 +11,17 @@ protocol DashboardPresenterType: PresenterType {
 
 extension DashboardPresenterType where ViewClass: DashboardViewType, ServiceClass: DashboardServiceType {
     
+    func getEvents() {
+        self.view?.showLoadingView()
+        
+        service.getEvents().done { response in
+            self.view?.createDataModel(with: response)
+        }.ensure {
+            self.view?.hideLoadingView()
+        }.catch { error in
+            print(error)
+        }
+    }
 }
 
 class DashboardPresenter: DashboardPresenterType {
