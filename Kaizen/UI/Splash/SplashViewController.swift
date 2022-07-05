@@ -11,5 +11,12 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let controller = DashboardViewController.instanceInNavController()
+        self.navigationController?.pushViewController(controller.controller, animated: true)
+    }
 
 }

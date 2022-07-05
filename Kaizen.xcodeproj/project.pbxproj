@@ -19,6 +19,13 @@
 		23CCD9D02874C8DF00301D8D /* APIResponseSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9CF2874C8DF00301D8D /* APIResponseSports.swift */; };
 		23CCD9D22874CB9500301D8D /* HTTPGeneralRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9D12874CB9500301D8D /* HTTPGeneralRouter.swift */; };
 		23CCD9D42874CBA400301D8D /* HTTPGeneralRouterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9D32874CBA400301D8D /* HTTPGeneralRouterExtension.swift */; };
+		23CCD9D72874CD9700301D8D /* MVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9D62874CD9700301D8D /* MVP.swift */; };
+		23CCD9D92874CF8100301D8D /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9D82874CF8100301D8D /* UIKitExtensions.swift */; };
+		23CCD9DE2874D06000301D8D /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9DA2874D06000301D8D /* DashboardPresenter.swift */; };
+		23CCD9DF2874D06000301D8D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9DB2874D06000301D8D /* DashboardViewController.swift */; };
+		23CCD9E02874D06000301D8D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9DC2874D06000301D8D /* DashboardView.swift */; };
+		23CCD9E12874D06000301D8D /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9DD2874D06000301D8D /* DashboardService.swift */; };
+		23CCD9E42874D09200301D8D /* IndexPathTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9E32874D09200301D8D /* IndexPathTools.swift */; };
 		A058FE2A36EAA9B88DA7C954 /* Pods_Kaizen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864376477B0508D4E83F706 /* Pods_Kaizen.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +56,13 @@
 		23CCD9CF2874C8DF00301D8D /* APIResponseSports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseSports.swift; sourceTree = "<group>"; };
 		23CCD9D12874CB9500301D8D /* HTTPGeneralRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPGeneralRouter.swift; sourceTree = "<group>"; };
 		23CCD9D32874CBA400301D8D /* HTTPGeneralRouterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPGeneralRouterExtension.swift; sourceTree = "<group>"; };
+		23CCD9D62874CD9700301D8D /* MVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP.swift; sourceTree = "<group>"; };
+		23CCD9D82874CF8100301D8D /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		23CCD9DA2874D06000301D8D /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		23CCD9DB2874D06000301D8D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		23CCD9DC2874D06000301D8D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		23CCD9DD2874D06000301D8D /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
+		23CCD9E32874D09200301D8D /* IndexPathTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathTools.swift; sourceTree = "<group>"; };
 		880B5B82CD1C2A7B1BCA05FE /* Pods-Kaizen-KaizenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen-KaizenTests.release.xcconfig"; path = "Target Support Files/Pods-Kaizen-KaizenTests/Pods-Kaizen-KaizenTests.release.xcconfig"; sourceTree = "<group>"; };
 		8864376477B0508D4E83F706 /* Pods_Kaizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F035A943D90C5683BB3DC78 /* Pods-Kaizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen.release.xcconfig"; path = "Target Support Files/Pods-Kaizen/Pods-Kaizen.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +91,8 @@
 		2336A5F32874BB9800E696DD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				23CCD9D52874CCE100301D8D /* MVP */,
+				23CCD9E22874D08900301D8D /* IndexPathTools */,
 				23CCD9CA2874C1FC00301D8D /* Extensions */,
 			);
 			path = Core;
@@ -198,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				23CCD9CB2874C21100301D8D /* FoundationExtensions.swift */,
+				23CCD9D82874CF8100301D8D /* UIKitExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,8 +230,28 @@
 		23CCD9CE2874C6CB00301D8D /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				23CCD9DB2874D06000301D8D /* DashboardViewController.swift */,
+				23CCD9DC2874D06000301D8D /* DashboardView.swift */,
+				23CCD9DD2874D06000301D8D /* DashboardService.swift */,
+				23CCD9DA2874D06000301D8D /* DashboardPresenter.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		23CCD9D52874CCE100301D8D /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				23CCD9D62874CD9700301D8D /* MVP.swift */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		23CCD9E22874D08900301D8D /* IndexPathTools */ = {
+			isa = PBXGroup;
+			children = (
+				23CCD9E32874D09200301D8D /* IndexPathTools.swift */,
+			);
+			path = IndexPathTools;
 			sourceTree = "<group>";
 		};
 		41402638F243FEF03FCD3371 /* Frameworks */ = {
@@ -403,12 +440,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				23CCD9D42874CBA400301D8D /* HTTPGeneralRouterExtension.swift in Sources */,
+				23CCD9E02874D06000301D8D /* DashboardView.swift in Sources */,
+				23CCD9DE2874D06000301D8D /* DashboardPresenter.swift in Sources */,
+				23CCD9E42874D09200301D8D /* IndexPathTools.swift in Sources */,
 				23CCD9CC2874C21100301D8D /* FoundationExtensions.swift in Sources */,
+				23CCD9D92874CF8100301D8D /* UIKitExtensions.swift in Sources */,
 				23CCD9D22874CB9500301D8D /* HTTPGeneralRouter.swift in Sources */,
 				238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */,
+				23CCD9E12874D06000301D8D /* DashboardService.swift in Sources */,
 				238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */,
 				2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */,
+				23CCD9DF2874D06000301D8D /* DashboardViewController.swift in Sources */,
 				23CCD9D02874C8DF00301D8D /* APIResponseSports.swift in Sources */,
+				23CCD9D72874CD9700301D8D /* MVP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,10 +621,10 @@
 				INFOPLIST_FILE = "Kaizen/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,10 +652,10 @@
 				INFOPLIST_FILE = "Kaizen/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
