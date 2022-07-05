@@ -1,0 +1,41 @@
+opt_in_rules:
+- force_unwrapping
+- force_cast
+- function_parameter_count
+- colon
+- unused_closure_parameter
+- shorthand_operator
+- redundant_void_return
+- redundant_optional_initialization
+- type_body_length
+- superfluous_disable_command
+- redundant_string_enum_value
+- function_body_length
+- cyclomatic_complexity
+- type_name
+- weak_delegate
+- class_delegate_protocol
+- file_length
+- large_tuple
+- empty_enum_arguments
+- comment_spacing
+- legacy_random
+- inclusive_language
+
+disabled_rules:
+- file_header
+- identifier_name
+- trailing_whitespace
+- line_length
+- syntactic_sugar
+
+excluded:
+- Carthage
+- Pods
+
+force_unwrapping: error
+force_cast: error
+vertical_whitespace: error
+opening_brace: error
+comma: error
+force_try: error

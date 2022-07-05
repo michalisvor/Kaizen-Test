@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19746244967238757D68E773 /* Pods_Kaizen_KaizenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645A42D043A27E994979E2D9 /* Pods_Kaizen_KaizenTests.framework */; };
+		2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2336A5F02874B91700E696DD /* .swiftlint.yml */; };
 		238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78752874B1A400E2FC1C /* AppDelegate.swift */; };
 		238F787A2874B1A400E2FC1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78792874B1A400E2FC1C /* ViewController.swift */; };
 		238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F787B2874B1A400E2FC1C /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2336A5F02874B91700E696DD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		238F78722874B1A400E2FC1C /* Kaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238F78752874B1A400E2FC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238F78792874B1A400E2FC1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,9 +67,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2336A5F32874BB9800E696DD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2336A5F42874BB9F00E696DD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2336A5F52874BBAC00E696DD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2336A5F62874BBC000E696DD /* Storyboard */,
+				238F78792874B1A400E2FC1C /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2336A5F62874BBC000E696DD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				238F787B2874B1A400E2FC1C /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2336A5F72874BBCB00E696DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				238F787E2874B1A500E2FC1C /* Assets.xcassets */,
+				238F78802874B1A500E2FC1C /* LaunchScreen.storyboard */,
+				238F78832874B1A500E2FC1C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		238F78692874B1A400E2FC1C = {
 			isa = PBXGroup;
 			children = (
+				2336A5F02874B91700E696DD /* .swiftlint.yml */,
 				238F78742874B1A400E2FC1C /* Kaizen */,
 				238F788B2874B1A500E2FC1C /* KaizenTests */,
 				238F78732874B1A400E2FC1C /* Products */,
@@ -89,11 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				238F78752874B1A400E2FC1C /* AppDelegate.swift */,
-				238F78792874B1A400E2FC1C /* ViewController.swift */,
-				238F787B2874B1A400E2FC1C /* Main.storyboard */,
-				238F787E2874B1A500E2FC1C /* Assets.xcassets */,
-				238F78802874B1A500E2FC1C /* LaunchScreen.storyboard */,
-				238F78832874B1A500E2FC1C /* Info.plist */,
+				2336A5F32874BB9800E696DD /* Core */,
+				2336A5F42874BB9F00E696DD /* Networking */,
+				2336A5F52874BBAC00E696DD /* UI */,
+				2336A5F72874BBCB00E696DD /* Supporting Files */,
 			);
 			path = Kaizen;
 			sourceTree = "<group>";
@@ -137,6 +180,7 @@
 				238F786E2874B1A400E2FC1C /* Sources */,
 				238F786F2874B1A400E2FC1C /* Frameworks */,
 				238F78702874B1A400E2FC1C /* Resources */,
+				2336A5F22874B9A700E696DD /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -211,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */,
 				238F78822874B1A500E2FC1C /* LaunchScreen.storyboard in Resources */,
 				238F787F2874B1A500E2FC1C /* Assets.xcassets in Resources */,
 				238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */,
@@ -227,6 +272,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2336A5F22874B9A700E696DD /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		8A6762656E9371F9983F54F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,12 +525,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WSJAKJDZQW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kaizen/Info.plist;
+				INFOPLIST_FILE = "Kaizen/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,12 +555,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WSJAKJDZQW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kaizen/Info.plist;
+				INFOPLIST_FILE = "Kaizen/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
