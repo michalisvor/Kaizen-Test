@@ -1,0 +1,15 @@
+
+.DS_Store
+
+/Pods/**/*
+/Kaizen/Pods/**/*
+*.xcuserstate
+/Kaizen/Pods
+xcuserdata
+
+Sedka/\.DS_Store
+
+\.DS_Store
+
+
+Pods/

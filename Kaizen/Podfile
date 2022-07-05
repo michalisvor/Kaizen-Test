@@ -1,0 +1,12 @@
+platform :ios, '12.0'
+
+target 'Kaizen' do
+  use_frameworks!
+
+
+  target 'KaizenTests' do
+    pod 'Alamofire'
+    pod 'Promises' 
+  end
+
+end
