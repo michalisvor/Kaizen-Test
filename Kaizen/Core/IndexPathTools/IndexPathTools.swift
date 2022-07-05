@@ -29,16 +29,16 @@ class IndexPathItem {
     var rowHeight: CGFloat
     var data: Any?
     
-    init(id: String, nibName: String? = nil, rowHeight: CGFloat = UITableView.automaticDimension, section: IndexPathSectionItem? = nil, data: Any? = nil) {
+    init(cellIdentifier: String, nibName: String? = nil, rowHeight: CGFloat = UITableView.automaticDimension, section: IndexPathSectionItem? = nil, data: Any? = nil) {
         self.identifier = ""
-        self.cellIdentifier = id
+        self.cellIdentifier = cellIdentifier
         self.rowHeight = rowHeight
         self.section = section
         self.data = data
         if let itemNibName = nibName {
             self.nibName = itemNibName
         } else {
-            self.nibName = id
+            self.nibName = cellIdentifier
         }
     }
 }

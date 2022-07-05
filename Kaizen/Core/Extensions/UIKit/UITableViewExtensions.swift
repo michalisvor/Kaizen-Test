@@ -37,3 +37,10 @@ extension UITableView {
         return nibModelArray
     }
 }
+
+extension UITableViewCell {
+    
+    static var id: String {
+        return String(describing: self)
+    }
+}

@@ -5,7 +5,7 @@
 
 import UIKit
 
-class CollectionViewTableViewCell: UITableViewCell {
+class SportEventCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -15,6 +15,9 @@
 		231A6C4E2874F61A00E65541 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A6C4D2874F61A00E65541 /* StringExtensions.swift */; };
 		231A6C512874F66D00E65541 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A6C4F2874F66D00E65541 /* CollectionViewTableViewCell.swift */; };
 		231A6C522874F66D00E65541 /* CollectionViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231A6C502874F66D00E65541 /* CollectionViewTableViewCell.xib */; };
+		231A6C542874FB0E00E65541 /* UICollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A6C532874FB0E00E65541 /* UICollectionExtensions.swift */; };
+		231A6C592875006800E65541 /* SportEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A6C572875006800E65541 /* SportEventCollectionViewCell.swift */; };
+		231A6C5A2875006800E65541 /* SportEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231A6C582875006800E65541 /* SportEventCollectionViewCell.xib */; };
 		2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2336A5F02874B91700E696DD /* .swiftlint.yml */; };
 		2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336A5FC2874BFE300E696DD /* HTTPClient.swift */; };
 		238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78752874B1A400E2FC1C /* AppDelegate.swift */; };
@@ -59,6 +62,9 @@
 		231A6C4D2874F61A00E65541 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		231A6C4F2874F66D00E65541 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		231A6C502874F66D00E65541 /* CollectionViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewTableViewCell.xib; sourceTree = "<group>"; };
+		231A6C532874FB0E00E65541 /* UICollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionExtensions.swift; sourceTree = "<group>"; };
+		231A6C572875006800E65541 /* SportEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		231A6C582875006800E65541 /* SportEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportEventCollectionViewCell.xib; sourceTree = "<group>"; };
 		2336A5F02874B91700E696DD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2336A5FC2874BFE300E696DD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		238F78722874B1A400E2FC1C /* Kaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,9 +129,28 @@
 				231A6C452874F56F00E65541 /* UIViewControllerExtensions.swift */,
 				231A6C472874F5BB00E65541 /* UINavigationControllerExtensions.swift */,
 				231A6C432874F55C00E65541 /* UITableViewExtensions.swift */,
+				231A6C532874FB0E00E65541 /* UICollectionExtensions.swift */,
 				231A6C492874F5E600E65541 /* UIColorExtensions.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		231A6C552875001D00E65541 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				231A6C4F2874F66D00E65541 /* CollectionViewTableViewCell.swift */,
+				231A6C502874F66D00E65541 /* CollectionViewTableViewCell.xib */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		231A6C562875002800E65541 /* Sport Event */ = {
+			isa = PBXGroup;
+			children = (
+				231A6C572875006800E65541 /* SportEventCollectionViewCell.swift */,
+				231A6C582875006800E65541 /* SportEventCollectionViewCell.xib */,
+			);
+			path = "Sport Event";
 			sourceTree = "<group>";
 		};
 		2336A5F32874BB9800E696DD /* Core */ = {
@@ -317,8 +342,8 @@
 		23CCD9EC2874F35800301D8D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				231A6C4F2874F66D00E65541 /* CollectionViewTableViewCell.swift */,
-				231A6C502874F66D00E65541 /* CollectionViewTableViewCell.xib */,
+				231A6C552875001D00E65541 /* Collection */,
+				231A6C562875002800E65541 /* Sport Event */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -440,6 +465,7 @@
 				23CCD9EA2874E11200301D8D /* Colors.xcassets in Resources */,
 				231A6C522874F66D00E65541 /* CollectionViewTableViewCell.xib in Resources */,
 				2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */,
+				231A6C5A2875006800E65541 /* SportEventCollectionViewCell.xib in Resources */,
 				238F78822874B1A500E2FC1C /* LaunchScreen.storyboard in Resources */,
 				238F787F2874B1A500E2FC1C /* Assets.xcassets in Resources */,
 				238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */,
@@ -533,11 +559,13 @@
 				238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */,
 				23CCD9E12874D06000301D8D /* DashboardService.swift in Sources */,
 				231A6C4E2874F61A00E65541 /* StringExtensions.swift in Sources */,
+				231A6C542874FB0E00E65541 /* UICollectionExtensions.swift in Sources */,
 				238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */,
 				2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */,
 				23CCD9DF2874D06000301D8D /* DashboardViewController.swift in Sources */,
 				23CCD9D02874C8DF00301D8D /* APIResponseSports.swift in Sources */,
 				231A6C512874F66D00E65541 /* CollectionViewTableViewCell.swift in Sources */,
+				231A6C592875006800E65541 /* SportEventCollectionViewCell.swift in Sources */,
 				231A6C482874F5BB00E65541 /* UINavigationControllerExtensions.swift in Sources */,
 				23CCD9D72874CD9700301D8D /* MVP.swift in Sources */,
 				231A6C4A2874F5E600E65541 /* UIColorExtensions.swift in Sources */,

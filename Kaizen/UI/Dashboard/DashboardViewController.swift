@@ -12,7 +12,7 @@ class DashboardViewController: UIViewController, ControllerType {
     
     @IBOutlet public weak var tableView: UITableView!
     
-    public var dataModel: IndexPathDataModel = IndexPathDataModel(items: [])
+    public var dataModel: IndexPathDataModel = IndexPathDataModel(sectionItems: [])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +38,26 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let indexPathItem = dataModel.item(at: indexPath),
-            let cell = tableView.dequeueReusableCell(withIdentifier: indexPathItem.cellIdentifier) else { return UITableViewCell() }
+        guard let item = dataModel.item(at: indexPath),
+            let cell = tableView.dequeueReusableCell(withIdentifier: item.cellIdentifier) else { return UITableViewCell() }
+        
+        switch (cell, item.data) {
+        case (let cell as CollectionViewTableViewCell, let data as [APIResponseSportEvent]):
+            cell.setUp(with: data)
+        default:
+            break
+        }
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return dataModel.item(at: indexPath)?.rowHeight ?? UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let data = dataModel.section(atSectionIndex: section).data as? APIResponseSport else { return nil }
-        let headerView = EventCategoryHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: tableView.sectionHeaderHeight))
+        let headerView = EventCategoryHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 40))
         headerView.setUp(title: data.sportName)
         return headerView
     }
