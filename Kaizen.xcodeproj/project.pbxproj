@@ -16,6 +16,9 @@
 		238F78822874B1A500E2FC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F78802874B1A500E2FC1C /* LaunchScreen.storyboard */; };
 		238F788D2874B1A500E2FC1C /* KaizenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F788C2874B1A500E2FC1C /* KaizenTests.swift */; };
 		23CCD9CC2874C21100301D8D /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9CB2874C21100301D8D /* FoundationExtensions.swift */; };
+		23CCD9D02874C8DF00301D8D /* APIResponseSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9CF2874C8DF00301D8D /* APIResponseSports.swift */; };
+		23CCD9D22874CB9500301D8D /* HTTPGeneralRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9D12874CB9500301D8D /* HTTPGeneralRouter.swift */; };
+		23CCD9D42874CBA400301D8D /* HTTPGeneralRouterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9D32874CBA400301D8D /* HTTPGeneralRouterExtension.swift */; };
 		A058FE2A36EAA9B88DA7C954 /* Pods_Kaizen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864376477B0508D4E83F706 /* Pods_Kaizen.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		238F78882874B1A500E2FC1C /* KaizenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaizenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		238F788C2874B1A500E2FC1C /* KaizenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaizenTests.swift; sourceTree = "<group>"; };
 		23CCD9CB2874C21100301D8D /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		23CCD9CF2874C8DF00301D8D /* APIResponseSports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseSports.swift; sourceTree = "<group>"; };
+		23CCD9D12874CB9500301D8D /* HTTPGeneralRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPGeneralRouter.swift; sourceTree = "<group>"; };
+		23CCD9D32874CBA400301D8D /* HTTPGeneralRouterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPGeneralRouterExtension.swift; sourceTree = "<group>"; };
 		880B5B82CD1C2A7B1BCA05FE /* Pods-Kaizen-KaizenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen-KaizenTests.release.xcconfig"; path = "Target Support Files/Pods-Kaizen-KaizenTests/Pods-Kaizen-KaizenTests.release.xcconfig"; sourceTree = "<group>"; };
 		8864376477B0508D4E83F706 /* Pods_Kaizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F035A943D90C5683BB3DC78 /* Pods-Kaizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen.release.xcconfig"; path = "Target Support Files/Pods-Kaizen/Pods-Kaizen.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,7 +96,7 @@
 			children = (
 				2336A5F62874BBC000E696DD /* Storyboard */,
 				23CCD9CD2874C34200301D8D /* Splash */,
-				238F78792874B1A400E2FC1C /* SplashViewController.swift */,
+				23CCD9CE2874C6CB00301D8D /* Dashboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -116,6 +122,7 @@
 		2336A5F82874BE9700E696DD /* Codable */ = {
 			isa = PBXGroup;
 			children = (
+				23CCD9CF2874C8DF00301D8D /* APIResponseSports.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -140,6 +147,8 @@
 		2336A5FB2874BF2C00E696DD /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				23CCD9D12874CB9500301D8D /* HTTPGeneralRouter.swift */,
+				23CCD9D32874CBA400301D8D /* HTTPGeneralRouterExtension.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -196,8 +205,16 @@
 		23CCD9CD2874C34200301D8D /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				238F78792874B1A400E2FC1C /* SplashViewController.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		23CCD9CE2874C6CB00301D8D /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		41402638F243FEF03FCD3371 /* Frameworks */ = {
@@ -385,10 +402,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23CCD9D42874CBA400301D8D /* HTTPGeneralRouterExtension.swift in Sources */,
 				23CCD9CC2874C21100301D8D /* FoundationExtensions.swift in Sources */,
+				23CCD9D22874CB9500301D8D /* HTTPGeneralRouter.swift in Sources */,
 				238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */,
 				238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */,
 				2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */,
+				23CCD9D02874C8DF00301D8D /* APIResponseSports.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
