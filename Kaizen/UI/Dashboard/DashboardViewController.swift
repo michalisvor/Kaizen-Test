@@ -16,9 +16,14 @@ class DashboardViewController: UIViewController, ControllerType {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        setUp()
     }
    
+    private func setUp() {
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.setUpWithBlueBackgroundColor()
+        prepareNavigationTitle("Stoiximan")
+    }
 }
 
 extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {

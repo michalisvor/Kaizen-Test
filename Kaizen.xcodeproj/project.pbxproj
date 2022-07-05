@@ -26,6 +26,8 @@
 		23CCD9E02874D06000301D8D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9DC2874D06000301D8D /* DashboardView.swift */; };
 		23CCD9E12874D06000301D8D /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9DD2874D06000301D8D /* DashboardService.swift */; };
 		23CCD9E42874D09200301D8D /* IndexPathTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9E32874D09200301D8D /* IndexPathTools.swift */; };
+		23CCD9E72874E08500301D8D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9E62874E08500301D8D /* NavigationController.swift */; };
+		23CCD9EA2874E11200301D8D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23CCD9E92874E11200301D8D /* Colors.xcassets */; };
 		A058FE2A36EAA9B88DA7C954 /* Pods_Kaizen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864376477B0508D4E83F706 /* Pods_Kaizen.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		23CCD9DC2874D06000301D8D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		23CCD9DD2874D06000301D8D /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		23CCD9E32874D09200301D8D /* IndexPathTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathTools.swift; sourceTree = "<group>"; };
+		23CCD9E62874E08500301D8D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		23CCD9E92874E11200301D8D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		880B5B82CD1C2A7B1BCA05FE /* Pods-Kaizen-KaizenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen-KaizenTests.release.xcconfig"; path = "Target Support Files/Pods-Kaizen-KaizenTests/Pods-Kaizen-KaizenTests.release.xcconfig"; sourceTree = "<group>"; };
 		8864376477B0508D4E83F706 /* Pods_Kaizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F035A943D90C5683BB3DC78 /* Pods-Kaizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen.release.xcconfig"; path = "Target Support Files/Pods-Kaizen/Pods-Kaizen.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				23CCD9D52874CCE100301D8D /* MVP */,
 				23CCD9E22874D08900301D8D /* IndexPathTools */,
 				23CCD9CA2874C1FC00301D8D /* Extensions */,
+				23CCD9E52874E05400301D8D /* ReUsable UI */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				238F787E2874B1A500E2FC1C /* Assets.xcassets */,
+				23CCD9E92874E11200301D8D /* Colors.xcassets */,
 				238F78802874B1A500E2FC1C /* LaunchScreen.storyboard */,
 				238F78832874B1A500E2FC1C /* Info.plist */,
 			);
@@ -254,6 +260,14 @@
 			path = IndexPathTools;
 			sourceTree = "<group>";
 		};
+		23CCD9E52874E05400301D8D /* ReUsable UI */ = {
+			isa = PBXGroup;
+			children = (
+				23CCD9E62874E08500301D8D /* NavigationController.swift */,
+			);
+			path = "ReUsable UI";
+			sourceTree = "<group>";
+		};
 		41402638F243FEF03FCD3371 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23CCD9EA2874E11200301D8D /* Colors.xcassets in Resources */,
 				2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */,
 				238F78822874B1A500E2FC1C /* LaunchScreen.storyboard in Resources */,
 				238F787F2874B1A500E2FC1C /* Assets.xcassets in Resources */,
@@ -446,6 +461,7 @@
 				23CCD9CC2874C21100301D8D /* FoundationExtensions.swift in Sources */,
 				23CCD9D92874CF8100301D8D /* UIKitExtensions.swift in Sources */,
 				23CCD9D22874CB9500301D8D /* HTTPGeneralRouter.swift in Sources */,
+				23CCD9E72874E08500301D8D /* NavigationController.swift in Sources */,
 				238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */,
 				23CCD9E12874D06000301D8D /* DashboardService.swift in Sources */,
 				238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */,

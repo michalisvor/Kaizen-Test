@@ -22,7 +22,6 @@ extension AppDelegate {
     
     private func setUpRootViewController() {
         let controller = SplashViewController.instanceInNavController()
-        controller.navigationController.isNavigationBarHidden = true
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = controller.navigationController

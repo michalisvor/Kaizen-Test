@@ -18,5 +18,4 @@ class SplashViewController: UIViewController {
         let controller = DashboardViewController.instanceInNavController()
         self.navigationController?.pushViewController(controller.controller, animated: true)
     }
-
 }
