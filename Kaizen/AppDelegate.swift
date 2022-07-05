@@ -1,8 +1,6 @@
 //
-//  AppDelegate.swift
-//  Kaizen
-//
-//  Created by Michalis Vorisis on 5/7/22.
+//  Created by Michalis Vorisis.
+//  Copyright © 2022 Michalis Vorisis. All rights reserved.
 //
 
 import UIKit
