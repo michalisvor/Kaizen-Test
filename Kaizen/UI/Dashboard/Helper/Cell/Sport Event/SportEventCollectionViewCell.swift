@@ -76,9 +76,12 @@ class SportEventCollectionViewCell: UICollectionViewCell {
     @objc private func favoriteTapped(_ sender: UITapGestureRecognizer) {
         guard let imageView = sender.view as? FavoriteUIImageView, let event = imageView.event else { return }
         
-        // I will change here the isFavorite property and now by the class type the value has been updated everywhere.
-        event.isFavorite.toggle()
-        setUpImage(isFavorite: event.isFavorite)
-        delegate?.didChangeEvent(id: event.eventId ?? "")
+        // Added pop animation
+        favoriteImageView.pop {
+            // I will change here the isFavorite property and now by the class type the value has been updated everywhere.
+            event.isFavorite.toggle()
+            self.setUpImage(isFavorite: event.isFavorite)
+            self.delegate?.didChangeEvent(id: event.eventId ?? "")
+        }
     }
 }
