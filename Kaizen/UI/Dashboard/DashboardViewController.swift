@@ -17,6 +17,7 @@ class DashboardViewController: ExpandableTableViewController, ControllerType {
     }
    
     private func setUp() {
+        KaizenTimer.shared.addDelegate(self)
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true
         navigationController?.setUpWithBlueBackgroundColor()
@@ -43,6 +44,11 @@ extension DashboardViewController {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? CollectionViewTableViewCell else { return }
+        cell.updateTimers()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -76,6 +82,18 @@ extension DashboardViewController: EventCategoryHeaderViewDelegate {
 
     func didTapOnArrow(in section: Int) {
         didSelect(section: section)
+    }
+}
+
+extension DashboardViewController: KaizenTimerDelegate {
+    
+    func didUpdateTimer() {
+        let visibleCells = tableView.visibleCells
+        
+        for visibleCell in visibleCells {
+            guard let cell = visibleCell as? CollectionViewTableViewCell else { continue }
+            cell.updateTimers()
+        }
     }
 }
 

@@ -37,6 +37,15 @@ class CollectionViewTableViewCell: UITableViewCell {
         collectionView.registerAll(from: dataModel)
         collectionView.reloadData()
     }
+    
+    func updateTimers() {
+        let visibleCells = collectionView.visibleCells
+        
+        for visibleCell in visibleCells {
+            guard let cell = visibleCell as? SportEventCollectionViewCell else { continue }
+            cell.setUpTimeLabel()
+        }
+    }
 }
 
 extension CollectionViewTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {

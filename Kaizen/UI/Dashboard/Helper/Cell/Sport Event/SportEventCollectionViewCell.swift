@@ -22,12 +22,15 @@ class SportEventCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: SportEventCollectionViewCellDelegate?
     
+    var sportEvent: APIResponseSportEvent!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
     }
 
     func setUp(with data: APIResponseSportEvent) {
+        sportEvent = data
         timeTitleLabel.text = "1"
         
         let teams = data.teams
@@ -40,6 +43,21 @@ class SportEventCollectionViewCell: UICollectionViewCell {
         setUpImage(isFavorite: data.isFavorite)
         favoriteImageView.event = data
         favoriteImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(favoriteTapped)))
+        setUpTimeLabel()
+    }
+    
+    func setUpTimeLabel() {
+        guard let event = sportEvent, let startTime = event.eventStartTime else { return }
+        let time = abs(Date().timeIntervalSince(Date(timeIntervalSince1970: startTime)))
+        
+        let hours = Int(time) / 3600
+        let minutes = (Int(time) / 60) % 60
+        let seconds = Int(time) % 60
+        
+        var times: [String] = []
+        times.append(contentsOf: ["\(hours)", "\(minutes)", "\(seconds)"])
+        
+        timeTitleLabel.text = times.joined(separator: ":")
     }
     
     private func setUpImage(isFavorite: Bool) {
