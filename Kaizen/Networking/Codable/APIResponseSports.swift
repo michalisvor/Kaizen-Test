@@ -14,7 +14,6 @@ class APIResponseSport: Codable {
         return SportType(rawValue: sportId ?? "")
     }
     
-    
     /// Use CodingKeys to parse response with custom variable names
     enum CodingKeys: String, CodingKey {
         case sportId = "i"

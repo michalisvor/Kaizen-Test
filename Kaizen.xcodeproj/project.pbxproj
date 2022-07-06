@@ -23,6 +23,7 @@
 		237FDB802875AC9400B4E4B1 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */; };
 		237FDB832875DE1C00B4E4B1 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB822875DE1C00B4E4B1 /* AppEnums.swift */; };
 		237FDB892875F84200B4E4B1 /* KaizenTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB882875F84200B4E4B1 /* KaizenTimer.swift */; };
+		237FDB8B2876269900B4E4B1 /* UIBarButtonItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB8A2876269900B4E4B1 /* UIBarButtonItemExtensions.swift */; };
 		238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78752874B1A400E2FC1C /* AppDelegate.swift */; };
 		238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78792874B1A400E2FC1C /* SplashViewController.swift */; };
 		238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F787B2874B1A400E2FC1C /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
 		237FDB822875DE1C00B4E4B1 /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
 		237FDB882875F84200B4E4B1 /* KaizenTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaizenTimer.swift; sourceTree = "<group>"; };
+		237FDB8A2876269900B4E4B1 /* UIBarButtonItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtensions.swift; sourceTree = "<group>"; };
 		238F78722874B1A400E2FC1C /* Kaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238F78752874B1A400E2FC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238F78792874B1A400E2FC1C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				231A6C432874F55C00E65541 /* UITableViewExtensions.swift */,
 				231A6C532874FB0E00E65541 /* UICollectionExtensions.swift */,
 				231A6C492874F5E600E65541 /* UIColorExtensions.swift */,
+				237FDB8A2876269900B4E4B1 /* UIBarButtonItemExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				237FDB802875AC9400B4E4B1 /* ExpandableTableView.swift in Sources */,
 				23CCD9E12874D06000301D8D /* DashboardService.swift in Sources */,
 				231A6C4E2874F61A00E65541 /* StringExtensions.swift in Sources */,
+				237FDB8B2876269900B4E4B1 /* UIBarButtonItemExtensions.swift in Sources */,
 				231A6C542874FB0E00E65541 /* UICollectionExtensions.swift in Sources */,
 				238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */,
 				2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */,

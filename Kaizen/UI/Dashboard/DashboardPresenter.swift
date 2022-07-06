@@ -6,15 +6,16 @@
 import UIKit
 
 protocol DashboardPresenterType: PresenterType {
-
+    var sports: [APIResponseSport] { get set }
 }
 
 extension DashboardPresenterType where ViewClass: DashboardViewType, ServiceClass: DashboardServiceType {
     
     func getEvents() {
-        self.view?.showLoadingView()
+        (view?.refreshControl.isRefreshing ?? false) ? () : view?.showLoadingView()
         
         service.getEvents().done { response in
+            self.sports = response
             self.view?.createDataModel(with: response)
         }.ensure {
             self.view?.hideLoadingView()
@@ -31,6 +32,8 @@ class DashboardPresenter: DashboardPresenterType {
     
     weak var view: DashboardViewController?
     var service: DashboardService!
+    
+    var sports: [APIResponseSport] = []
     
     required init() {}
 }
