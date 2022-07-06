@@ -23,6 +23,22 @@ class APIResponseSportEvent: Codable {
     var eventName: String?
     var eventStartTime: TimeInterval?
     
+    // Computed Properties
+    var isFavorite: Bool = false
+    
+    var teams: (teamHome: String?, teamAway: String?) {
+        guard let eventName = eventName else { return (nil, nil) }
+        let components = eventName.components(separatedBy: " - ")
+        let teamHome = components.first
+        var teamAway: String?
+        
+        if components.count > 1 {
+            teamAway = components[1]
+        }
+        
+        return (teamHome, teamAway)
+    }
+    
     enum CodingKeys: String, CodingKey {
         case eventId = "i"
         case sportId = "si"

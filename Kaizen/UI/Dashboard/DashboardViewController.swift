@@ -44,10 +44,6 @@ extension DashboardViewController {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return dataModel.item(at: indexPath)?.rowHeight ?? UITableView.automaticDimension
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let data = dataModel.section(atSectionIndex: section).data as? APIResponseSport else { return nil }
         
