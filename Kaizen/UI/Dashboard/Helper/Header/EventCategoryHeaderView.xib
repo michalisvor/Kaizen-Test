@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventCategoryHeaderView" customModule="Kaizen" customModuleProvider="target">
             <connections>
+                <outlet property="arrowImageView" destination="Tc7-JK-AOW" id="3rf-PL-pcc"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="q8o-2h-M1M"/>
                 <outlet property="titleLabel" destination="4W9-v1-O6s" id="DZa-SB-MAy"/>
             </connections>
@@ -20,17 +21,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W9-v1-O6s">
-                    <rect key="frame" x="16" y="8" width="423" height="65"/>
+                    <rect key="frame" x="16" y="8" width="396.66666666666669" height="65"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow_up_white" translatesAutoresizingMaskIntoConstraints="NO" id="Tc7-JK-AOW">
+                    <rect key="frame" x="428.66666666666669" y="35.666666666666664" width="14.333333333333314" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="cJs-YC-cVs"/>
+                        <constraint firstAttribute="width" secondItem="Tc7-JK-AOW" secondAttribute="height" multiplier="1.44" id="uRB-sv-uOZ"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.15674287079999999" green="0.19092994930000001" blue="0.24499833579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4W9-v1-O6s" secondAttribute="trailing" constant="16" id="8Gz-Ue-Mcj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Tc7-JK-AOW" secondAttribute="trailing" constant="12" id="BUc-j1-hha"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4W9-v1-O6s" secondAttribute="bottom" constant="8" id="Civ-9f-k2S"/>
+                <constraint firstItem="Tc7-JK-AOW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Waz-5s-6Za"/>
+                <constraint firstItem="Tc7-JK-AOW" firstAttribute="leading" secondItem="4W9-v1-O6s" secondAttribute="trailing" constant="16" id="iZi-ii-T03"/>
                 <constraint firstItem="4W9-v1-O6s" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="qnG-wz-oxf"/>
                 <constraint firstItem="4W9-v1-O6s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="wRV-iK-7Vj"/>
             </constraints>
@@ -38,4 +48,7 @@
             <point key="canvasLocation" x="-12.318840579710146" y="153.66847826086959"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon_arrow_up_white" width="27.333333969116211" height="15.333333015441895"/>
+    </resources>
 </document>

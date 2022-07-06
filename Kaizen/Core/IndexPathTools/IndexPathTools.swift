@@ -11,12 +11,14 @@ class IndexPathSectionItem {
     var rowHeight: CGFloat
     var data: Any?
     var children: [IndexPathItem]
+    var isOpened: Bool
     
-    init(identifier: String, rowHeight: CGFloat = 0.0, data: Any? = nil, children: [IndexPathItem] = []) {
+    init(identifier: String, rowHeight: CGFloat = 0.0, data: Any? = nil, children: [IndexPathItem] = [], isOpened: Bool = true) {
         self.identifier = identifier
         self.rowHeight = rowHeight
         self.data = data
         self.children = children
+        self.isOpened = isOpened
     }
 }
 

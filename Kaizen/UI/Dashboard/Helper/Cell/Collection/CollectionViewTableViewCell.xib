@@ -19,7 +19,7 @@
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Rrp-Wy-r0E">
                         <rect key="frame" x="0.0" y="0.0" width="528" height="276"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.10505565259999999" green="0.1233538762" blue="0.15002357960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iTa-fs-yvS">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -28,7 +28,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" red="0.10505565259999999" green="0.1233538762" blue="0.15002357960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Rrp-Wy-r0E" secondAttribute="trailing" id="4u2-7K-EWR"/>
                     <constraint firstItem="Rrp-Wy-r0E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9ab-X7-CPG"/>
