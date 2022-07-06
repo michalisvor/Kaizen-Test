@@ -22,16 +22,22 @@ class SportEventCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: SportEventCollectionViewCellDelegate?
     
-    var sportEvent: APIResponseSportEvent!
+    private var sportEvent: APIResponseSportEvent!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
+        // I could use greater than equal for timeTitleLabel leading constraint
+        // or even to put it inside a UIView.
+        // But with these too large times the UI wouldn't be so pretty with every change,
+        // so I chose the whole space for the border.
+        timeTitleLabel.layer.borderColor = UIColor(hex: "E0E1E1").cgColor
+        timeTitleLabel.layer.borderWidth = 1
+        timeTitleLabel.layer.cornerRadius = 6
     }
 
     func setUp(with data: APIResponseSportEvent) {
         sportEvent = data
-        timeTitleLabel.text = "1"
         
         let teams = data.teams
         teamHomeLabel.text = teams.teamHome
@@ -47,7 +53,10 @@ class SportEventCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpTimeLabel() {
-        guard let event = sportEvent, let startTime = event.eventStartTime else { return }
+        guard let event = sportEvent, let startTime = event.eventStartTime else {
+            timeTitleLabel.text = ""
+            return
+        }
         let time = abs(Date().timeIntervalSince(Date(timeIntervalSince1970: startTime)))
         
         let hours = Int(time) / 3600
