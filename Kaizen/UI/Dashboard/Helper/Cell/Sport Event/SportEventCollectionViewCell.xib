@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rO6-sT-TSJ">
-                        <rect key="frame" x="4" y="24" width="599" height="101.5"/>
+                        <rect key="frame" x="4" y="24" width="599" height="102"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH3-PT-G8A">
                                 <rect key="frame" x="0.0" y="0.0" width="599" height="20.5"/>
@@ -26,7 +26,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_star_unfilled" translatesAutoresizingMaskIntoConstraints="NO" id="KK9-Ed-zIA">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_star_unfilled" translatesAutoresizingMaskIntoConstraints="NO" id="KK9-Ed-zIA" customClass="FavoriteUIImageView" customModule="Kaizen" customModuleProvider="target">
                                 <rect key="frame" x="289.5" y="26.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="FdS-MI-RBx"/>
@@ -55,11 +55,12 @@
                         <constraints>
                             <constraint firstItem="XH3-PT-G8A" firstAttribute="leading" secondItem="rO6-sT-TSJ" secondAttribute="leading" id="4BQ-Ul-efC"/>
                             <constraint firstItem="YWt-5w-wIG" firstAttribute="top" secondItem="KK9-Ed-zIA" secondAttribute="bottom" constant="6" id="9NR-M9-Wcc"/>
-                            <constraint firstAttribute="bottom" secondItem="YWt-5w-wIG" secondAttribute="bottom" constant="4" id="BSO-ju-gAz"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YWt-5w-wIG" secondAttribute="bottom" constant="4" id="BSO-ju-gAz"/>
                             <constraint firstItem="XH3-PT-G8A" firstAttribute="top" secondItem="rO6-sT-TSJ" secondAttribute="top" id="E1k-gQ-vgp"/>
                             <constraint firstItem="KK9-Ed-zIA" firstAttribute="centerX" secondItem="rO6-sT-TSJ" secondAttribute="centerX" id="H7v-ft-kxs"/>
                             <constraint firstItem="KK9-Ed-zIA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rO6-sT-TSJ" secondAttribute="leading" constant="16" id="Oai-hE-I8i"/>
                             <constraint firstItem="KK9-Ed-zIA" firstAttribute="top" secondItem="XH3-PT-G8A" secondAttribute="bottom" constant="6" id="aLk-Sq-lsa"/>
+                            <constraint firstAttribute="height" constant="102" id="g0r-Fm-jsw"/>
                             <constraint firstItem="YWt-5w-wIG" firstAttribute="leading" secondItem="rO6-sT-TSJ" secondAttribute="leading" constant="4" id="jaZ-LN-xd9"/>
                             <constraint firstItem="XH3-PT-G8A" firstAttribute="centerX" secondItem="rO6-sT-TSJ" secondAttribute="centerX" id="vql-jQ-8C2"/>
                             <constraint firstItem="YWt-5w-wIG" firstAttribute="centerX" secondItem="rO6-sT-TSJ" secondAttribute="centerX" id="wQH-on-lGN"/>
@@ -76,6 +77,7 @@
             </constraints>
             <size key="customSize" width="607" height="288"/>
             <connections>
+                <outlet property="favoriteImageView" destination="KK9-Ed-zIA" id="K5J-z6-w1d"/>
                 <outlet property="teamAwayLabel" destination="NOY-8u-ZLw" id="eDW-8N-C06"/>
                 <outlet property="teamHomeLabel" destination="g5Y-hl-oHQ" id="iCg-pZ-kOm"/>
                 <outlet property="timeTitleLabel" destination="XH3-PT-G8A" id="VyS-wI-leY"/>

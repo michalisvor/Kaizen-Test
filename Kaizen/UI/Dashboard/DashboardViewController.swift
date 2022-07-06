@@ -18,6 +18,7 @@ class DashboardViewController: ExpandableTableViewController, ControllerType {
    
     private func setUp() {
         navigationController?.isNavigationBarHidden = false
+        navigationItem.hidesBackButton = true
         navigationController?.setUpWithBlueBackgroundColor()
         prepareNavigationTitle("Stoiximan")
     }

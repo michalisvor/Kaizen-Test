@@ -43,7 +43,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W3g-ZC-Cga">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.10505565259999999" green="0.1233538762" blue="0.15002357960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="L9x-nh-PoI" id="lac-Zv-IsU"/>
@@ -55,7 +55,7 @@
                         <color key="backgroundColor" red="0.10505565259999999" green="0.1233538762" blue="0.15002357960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="W3g-ZC-Cga" firstAttribute="top" secondItem="QJq-Bw-E8G" secondAttribute="top" id="gr6-Zg-Yzq"/>
-                            <constraint firstAttribute="bottom" secondItem="W3g-ZC-Cga" secondAttribute="bottom" id="maf-BH-h1y"/>
+                            <constraint firstItem="QJq-Bw-E8G" firstAttribute="bottom" secondItem="W3g-ZC-Cga" secondAttribute="bottom" id="maf-BH-h1y"/>
                             <constraint firstItem="QJq-Bw-E8G" firstAttribute="trailing" secondItem="W3g-ZC-Cga" secondAttribute="trailing" id="nrK-LF-XFG"/>
                             <constraint firstItem="W3g-ZC-Cga" firstAttribute="leading" secondItem="QJq-Bw-E8G" secondAttribute="leading" id="w6x-FP-zoi"/>
                         </constraints>

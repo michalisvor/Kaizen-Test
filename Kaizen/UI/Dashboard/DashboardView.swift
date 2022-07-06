@@ -19,8 +19,8 @@ extension DashboardViewType {
             let events = sport.events?.compactMap({ $0 }) ?? []
             
             guard events.count > 0 else { continue } // Check if there are event so we dont show an empty collection
-            let child = IndexPathItem(cellIdentifier: CollectionViewTableViewCell.id, data: events)
-            let headerItem = IndexPathSectionItem(identifier: "\(items.count)", rowHeight: 40, data: sport, children: [child])
+            let child = IndexPathItem(cellIdentifier: "\(items.count)", nibName: CollectionViewTableViewCell.id, data: events)
+            let headerItem = IndexPathSectionItem(identifier: "\(items.count)", rowHeight: 45, data: sport, children: [child])
             items.append(headerItem)
         }
         

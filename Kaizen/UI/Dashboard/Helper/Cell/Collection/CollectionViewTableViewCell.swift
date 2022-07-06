@@ -11,18 +11,27 @@ class CollectionViewTableViewCell: UITableViewCell {
     
     var dataModel: IndexPathDataModel = IndexPathDataModel(items: [])
     
+    private var events: [APIResponseSportEvent] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUp()
+    }
+    
+    private func setUp() {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
 
     func setUp(with sportEvents: [APIResponseSportEvent]) {
+        events = sportEvents
         var items: [IndexPathItem] = []
         
         for sportEvent in sportEvents {
             items.append(IndexPathItem(cellIdentifier: SportEventCollectionViewCell.id, data: sportEvent))
         }
+        
+        items.sort { ($0.data as? APIResponseSportEvent)?.isFavorite == true && ($1.data as? APIResponseSportEvent)?.isFavorite == false }
         
         dataModel = IndexPathDataModel(items: items)
         collectionView.registerAll(from: dataModel)
@@ -47,6 +56,7 @@ extension CollectionViewTableViewCell: UICollectionViewDataSource, UICollectionV
         switch (cell, item.data) {
         case (let cell as SportEventCollectionViewCell, let data as APIResponseSportEvent):
             cell.setUp(with: data)
+            cell.delegate = self
         default:
             break
         }
@@ -59,7 +69,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Height is calculated by the top and bottom of the cardView in SportEventCollectionViewCell and its height (its set in this class xib)
-        return CGSize(width: 175, height: collectionView.bounds.height)
+        return CGSize(width: 150, height: collectionView.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -72,5 +82,12 @@ extension CollectionViewTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension CollectionViewTableViewCell: SportEventCollectionViewCellDelegate {
+    
+    func didChangeEvent(id: String) {
+        setUp(with: events)
     }
 }

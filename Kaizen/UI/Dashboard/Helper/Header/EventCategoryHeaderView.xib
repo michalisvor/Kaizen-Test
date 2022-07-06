@@ -32,14 +32,14 @@
                                     <rect key="frame" x="2" y="25" width="16" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="16" id="5qT-hv-RcR"/>
-                                        <constraint firstAttribute="height" constant="16" id="ro7-br-x1G"/>
+                                        <constraint firstAttribute="height" priority="999" constant="16" id="sza-kX-8QL"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="6xO-S5-cW3" firstAttribute="centerY" secondItem="Ha4-fj-OWF" secondAttribute="centerY" constant="0.5" id="02N-5o-rpb"/>
-                                <constraint firstItem="6xO-S5-cW3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ha4-fj-OWF" secondAttribute="top" constant="4" id="BZ3-9B-K9G"/>
+                                <constraint firstItem="6xO-S5-cW3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ha4-fj-OWF" secondAttribute="top" id="BZ3-9B-K9G"/>
                                 <constraint firstAttribute="trailing" secondItem="6xO-S5-cW3" secondAttribute="trailing" constant="2" id="beI-B9-Age"/>
                                 <constraint firstItem="6xO-S5-cW3" firstAttribute="leading" secondItem="Ha4-fj-OWF" secondAttribute="leading" constant="2" id="kzr-V1-75T"/>
                             </constraints>
