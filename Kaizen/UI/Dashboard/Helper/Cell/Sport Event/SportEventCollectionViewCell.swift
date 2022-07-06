@@ -40,8 +40,8 @@ class SportEventCollectionViewCell: UICollectionViewCell {
         sportEvent = data
         
         let teams = data.teams
-        teamHomeLabel.text = teams.teamHome
-        teamAwayLabel.text = teams.teamAway
+        teamHomeLabel.attributedText = teams.teamHome?.style(fontName: .regular, x2FontSize: 17, color: .white, alignment: .center)
+        teamAwayLabel.attributedText = teams.teamAway?.style(fontName: .regular, x2FontSize: 17, color: .white, alignment: .center)
         
         teamHomeLabel.isHidden = teams.teamHome == nil
         teamAwayLabel.isHidden = teams.teamAway == nil
@@ -66,7 +66,7 @@ class SportEventCollectionViewCell: UICollectionViewCell {
         var times: [String] = []
         times.append(contentsOf: ["\(hours)", "\(minutes)", "\(seconds)"])
         
-        timeTitleLabel.text = times.joined(separator: ":")
+        timeTitleLabel.attributedText = times.joined(separator: ":").style(fontName: .regular, x2FontSize: 17, color: .white, alignment: .center)
     }
     
     private func setUpImage(isFavorite: Bool) {
