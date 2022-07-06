@@ -6,10 +6,6 @@
 import UIKit
 
 class NavigationController: UINavigationController {
-
-    var currentViewController: UIViewController? {
-        return viewControllers.first
-    }
     
     override public func pushViewController(_ viewController: UIViewController, animated: Bool) {
         navigationBar.tintColor = .white

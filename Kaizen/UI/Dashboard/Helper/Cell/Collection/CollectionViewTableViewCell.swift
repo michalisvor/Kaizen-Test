@@ -38,6 +38,8 @@ class CollectionViewTableViewCell: UITableViewCell {
         collectionView.reloadData()
     }
     
+    
+    /// Finds all visible cells to update the timer and avoid delegates to every cell that has a timing label
     func updateTimers() {
         let visibleCells = collectionView.visibleCells
         

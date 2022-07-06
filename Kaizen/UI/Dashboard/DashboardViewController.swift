@@ -88,6 +88,7 @@ extension DashboardViewController: EventCategoryHeaderViewDelegate {
 
 extension DashboardViewController: KaizenTimerDelegate {
     
+    /// Finds all visible cells to update the timer and avoid delegates to every cell that has a timing label
     func didUpdateTimer() {
         let visibleCells = tableView.visibleCells
         

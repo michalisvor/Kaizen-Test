@@ -7,6 +7,7 @@ import Foundation
 
 extension Encodable {
     
+    /// Takes a Codable and convert it to beautify string with a format of json
     func toJsonFormmated() -> String {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
