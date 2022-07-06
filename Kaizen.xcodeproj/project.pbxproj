@@ -21,6 +21,7 @@
 		2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2336A5F02874B91700E696DD /* .swiftlint.yml */; };
 		2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336A5FC2874BFE300E696DD /* HTTPClient.swift */; };
 		237FDB802875AC9400B4E4B1 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */; };
+		237FDB832875DE1C00B4E4B1 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB822875DE1C00B4E4B1 /* AppEnums.swift */; };
 		238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78752874B1A400E2FC1C /* AppDelegate.swift */; };
 		238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78792874B1A400E2FC1C /* SplashViewController.swift */; };
 		238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F787B2874B1A400E2FC1C /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		2336A5F02874B91700E696DD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2336A5FC2874BFE300E696DD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
+		237FDB822875DE1C00B4E4B1 /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
 		238F78722874B1A400E2FC1C /* Kaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238F78752874B1A400E2FC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238F78792874B1A400E2FC1C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		2336A5F32874BB9800E696DD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				237FDB812875DE1100B4E4B1 /* App Enums */,
 				23CCD9D52874CCE100301D8D /* MVP */,
 				23CCD9E22874D08900301D8D /* IndexPathTools */,
 				23CCD9CA2874C1FC00301D8D /* Extensions */,
@@ -244,6 +247,14 @@
 				237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */,
 			);
 			path = "Expandable Controller";
+			sourceTree = "<group>";
+		};
+		237FDB812875DE1100B4E4B1 /* App Enums */ = {
+			isa = PBXGroup;
+			children = (
+				237FDB822875DE1C00B4E4B1 /* AppEnums.swift */,
+			);
+			path = "App Enums";
 			sourceTree = "<group>";
 		};
 		238F78692874B1A400E2FC1C = {
@@ -568,6 +579,7 @@
 				231A6C4C2874F5FE00E65541 /* CodableExtensions.swift in Sources */,
 				23CCD9E72874E08500301D8D /* NavigationController.swift in Sources */,
 				238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */,
+				237FDB832875DE1C00B4E4B1 /* AppEnums.swift in Sources */,
 				237FDB802875AC9400B4E4B1 /* ExpandableTableView.swift in Sources */,
 				23CCD9E12874D06000301D8D /* DashboardService.swift in Sources */,
 				231A6C4E2874F61A00E65541 /* StringExtensions.swift in Sources */,

@@ -48,10 +48,10 @@ extension DashboardViewController {
         guard let data = dataModel.section(atSectionIndex: section).data as? APIResponseSport else { return nil }
         
         let headerView = EventCategoryHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 40))
-        headerView.setUp(title: data.sportName, isOpened: dataModel.section(atSectionIndex: section).isOpened)
+        headerView.setUp(data: data, isOpened: dataModel.section(atSectionIndex: section).isOpened)
         
         // If we want more buttons on the section or to just tap on the arrow to expand/collapse the section
-        // we can uncomment the below line of code to have the delegate functionality
+        // we can uncomment the below line of code to have the delegate functionality (see comments in the EventCategoryHeaderView setUp)
         // headerView.delegate = self
         
         // I will hold section index to tag property of the headerView so I can use it later on tap.

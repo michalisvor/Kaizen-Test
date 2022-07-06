@@ -17,6 +17,8 @@ protocol EventCategoryHeaderViewDelegate: AnyObject {
 class EventCategoryHeaderView: UIView {
 
     @IBOutlet private var contentView: UIView!
+    @IBOutlet private weak var sportImageContainerView: UIView!
+    @IBOutlet private weak var sportImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var arrowImageView: UIImageView!
     
@@ -39,10 +41,14 @@ class EventCategoryHeaderView: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
-    func setUp(title: String?, isOpened: Bool) {
-        titleLabel.text = title
+    func setUp(data: APIResponseSport, isOpened: Bool) {
+        sportImageView.image = data.sportType?.icon
+        sportImageContainerView.isHidden = data.sportType?.icon == nil
+        
+        titleLabel.text = data.sportName
         arrowImageView.image = isOpened ? UIImage(named: "icon_arrow_up_white") : UIImage(named: "icon_arrow_down_white")
-        arrowImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(arrowImageTapped)))
+        // To enable arrow tap for expandable uncomment bellow line
+        // arrowImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(arrowImageTapped)))
     }
     
     private func animateArrow(to state: ArrowState) {

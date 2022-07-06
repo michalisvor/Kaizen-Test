@@ -10,6 +10,10 @@ class APIResponseSport: Codable {
     var sportName: String?
     var events: [APIResponseSportEvent?]?
     
+    var sportType: SportType? {
+        return SportType(rawValue: sportId ?? "")
+    }
+    
     enum CodingKeys: String, CodingKey {
         case sportId = "i"
         case sportName = "d"
