@@ -72,6 +72,12 @@ extension CollectionViewTableViewCell: UICollectionViewDataSource, UICollectionV
         
         return cell
     }
+    
+    // If the user scroll too fast visibleCells can't keep up with scrolling and ends up with misleading time
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? SportEventCollectionViewCell else { return }
+        cell.setUpTimeLabel()
+    }
 }
 
 extension CollectionViewTableViewCell: UICollectionViewDelegateFlowLayout {

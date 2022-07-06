@@ -46,6 +46,7 @@ extension DashboardViewController {
         return cell
     }
     
+    // If the user scroll too fast visibleCells can't keep up with scrolling and ends up with misleading time
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell = cell as? CollectionViewTableViewCell else { return }
         cell.updateTimers()

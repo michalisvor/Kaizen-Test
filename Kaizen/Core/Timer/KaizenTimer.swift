@@ -23,6 +23,8 @@ final class KaizenTimer {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer),
                                      userInfo: nil, repeats: true)
         timer?.tolerance = 0.1
+        
+        // I add Timer to a run loop so when the user scrolls but hold his finger in the screen the timer shouldn't stop
         RunLoop.current.add(timer ?? Timer(), forMode: .common)
     }
     
