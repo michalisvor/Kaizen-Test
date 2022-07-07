@@ -7,7 +7,6 @@ import UIKit
 
 extension UIView {
     
-    
     /// Takes a UIView and make an effect of tapping 
     /// - Parameter completion: Use the completion to do the job you want after the animation finishes
     func pop(completion: @escaping () -> Void = {}) {

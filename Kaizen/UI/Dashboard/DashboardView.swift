@@ -15,7 +15,7 @@ extension DashboardViewType {
 
     func createDataModel(with sports: [APIResponseSport], shouldOpenAllSections: Bool = true) {
         var items: [IndexPathSectionItem] = []
-        
+                
         for sport in sports {
             let events = sport.events?.compactMap({ $0 }) ?? []
             
