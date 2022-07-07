@@ -20,6 +20,10 @@
 		231A6C5A2875006800E65541 /* SportEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231A6C582875006800E65541 /* SportEventCollectionViewCell.xib */; };
 		2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2336A5F02874B91700E696DD /* .swiftlint.yml */; };
 		2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336A5FC2874BFE300E696DD /* HTTPClient.swift */; };
+		237B948628772E2600555B47 /* MockDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948528772E2600555B47 /* MockDecoder.swift */; };
+		237B948928772F4200555B47 /* RouterTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948828772F4200555B47 /* RouterTestHelper.swift */; };
+		237B948B28772F8700555B47 /* HTTPGeneralRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948A28772F8700555B47 /* HTTPGeneralRouterTests.swift */; };
+		237B948D28772FA600555B47 /* APIResponseSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948C28772FA600555B47 /* APIResponseSportsTests.swift */; };
 		237FDB802875AC9400B4E4B1 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */; };
 		237FDB832875DE1C00B4E4B1 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB822875DE1C00B4E4B1 /* AppEnums.swift */; };
 		237FDB892875F84200B4E4B1 /* KaizenTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB882875F84200B4E4B1 /* KaizenTimer.swift */; };
@@ -34,7 +38,6 @@
 		238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F787B2874B1A400E2FC1C /* Main.storyboard */; };
 		238F787F2874B1A500E2FC1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238F787E2874B1A500E2FC1C /* Assets.xcassets */; };
 		238F78822874B1A500E2FC1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F78802874B1A500E2FC1C /* LaunchScreen.storyboard */; };
-		238F788D2874B1A500E2FC1C /* KaizenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F788C2874B1A500E2FC1C /* KaizenTests.swift */; };
 		23CCD9D02874C8DF00301D8D /* APIResponseSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9CF2874C8DF00301D8D /* APIResponseSports.swift */; };
 		23CCD9D22874CB9500301D8D /* HTTPGeneralRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9D12874CB9500301D8D /* HTTPGeneralRouter.swift */; };
 		23CCD9D42874CBA400301D8D /* HTTPGeneralRouterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9D32874CBA400301D8D /* HTTPGeneralRouterExtension.swift */; };
@@ -48,6 +51,7 @@
 		23CCD9EA2874E11200301D8D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23CCD9E92874E11200301D8D /* Colors.xcassets */; };
 		23CCD9EF2874F38900301D8D /* EventCategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCD9EE2874F38900301D8D /* EventCategoryHeaderView.swift */; };
 		23CCD9F12874F39800301D8D /* EventCategoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23CCD9F02874F39800301D8D /* EventCategoryHeaderView.xib */; };
+		63451974FDD5BC9E03325D7B /* Pods_KaizenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D607D4D52D8A1E448D23A2BA /* Pods_KaizenTests.framework */; };
 		A058FE2A36EAA9B88DA7C954 /* Pods_Kaizen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8864376477B0508D4E83F706 /* Pods_Kaizen.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +80,10 @@
 		231A6C582875006800E65541 /* SportEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportEventCollectionViewCell.xib; sourceTree = "<group>"; };
 		2336A5F02874B91700E696DD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2336A5FC2874BFE300E696DD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		237B948528772E2600555B47 /* MockDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDecoder.swift; sourceTree = "<group>"; };
+		237B948828772F4200555B47 /* RouterTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTestHelper.swift; sourceTree = "<group>"; };
+		237B948A28772F8700555B47 /* HTTPGeneralRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPGeneralRouterTests.swift; sourceTree = "<group>"; };
+		237B948C28772FA600555B47 /* APIResponseSportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseSportsTests.swift; sourceTree = "<group>"; };
 		237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
 		237FDB822875DE1C00B4E4B1 /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
 		237FDB882875F84200B4E4B1 /* KaizenTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaizenTimer.swift; sourceTree = "<group>"; };
@@ -93,7 +101,6 @@
 		238F78812874B1A500E2FC1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		238F78832874B1A500E2FC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238F78882874B1A500E2FC1C /* KaizenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaizenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		238F788C2874B1A500E2FC1C /* KaizenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaizenTests.swift; sourceTree = "<group>"; };
 		23CCD9CF2874C8DF00301D8D /* APIResponseSports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseSports.swift; sourceTree = "<group>"; };
 		23CCD9D12874CB9500301D8D /* HTTPGeneralRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPGeneralRouter.swift; sourceTree = "<group>"; };
 		23CCD9D32874CBA400301D8D /* HTTPGeneralRouterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPGeneralRouterExtension.swift; sourceTree = "<group>"; };
@@ -109,7 +116,10 @@
 		23CCD9F02874F39800301D8D /* EventCategoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCategoryHeaderView.xib; sourceTree = "<group>"; };
 		880B5B82CD1C2A7B1BCA05FE /* Pods-Kaizen-KaizenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen-KaizenTests.release.xcconfig"; path = "Target Support Files/Pods-Kaizen-KaizenTests/Pods-Kaizen-KaizenTests.release.xcconfig"; sourceTree = "<group>"; };
 		8864376477B0508D4E83F706 /* Pods_Kaizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9734374CCDFAE74A03750FAA /* Pods-KaizenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaizenTests.release.xcconfig"; path = "Target Support Files/Pods-KaizenTests/Pods-KaizenTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F035A943D90C5683BB3DC78 /* Pods-Kaizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen.release.xcconfig"; path = "Target Support Files/Pods-Kaizen/Pods-Kaizen.release.xcconfig"; sourceTree = "<group>"; };
+		AE407C35688D29204814570C /* Pods-KaizenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaizenTests.debug.xcconfig"; path = "Target Support Files/Pods-KaizenTests/Pods-KaizenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D607D4D52D8A1E448D23A2BA /* Pods_KaizenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaizenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F183AB93A10E82CA3C5829 /* Pods-Kaizen-KaizenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaizen-KaizenTests.debug.xcconfig"; path = "Target Support Files/Pods-Kaizen-KaizenTests/Pods-Kaizen-KaizenTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63451974FDD5BC9E03325D7B /* Pods_KaizenTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +272,70 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
+		237B947E28772DB400555B47 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		237B947F28772DBA00555B47 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				237B948128772DD000555B47 /* HTTP Layer */,
+				237B948228772DD900555B47 /* Codable */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		237B948028772DC400555B47 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		237B948128772DD000555B47 /* HTTP Layer */ = {
+			isa = PBXGroup;
+			children = (
+				237B948328772DF900555B47 /* HTTPClient */,
+				237B948428772E0200555B47 /* Routers */,
+			);
+			path = "HTTP Layer";
+			sourceTree = "<group>";
+		};
+		237B948228772DD900555B47 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				237B948C28772FA600555B47 /* APIResponseSportsTests.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		237B948328772DF900555B47 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		237B948428772E0200555B47 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				237B948A28772F8700555B47 /* HTTPGeneralRouterTests.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		237B948728772E2B00555B47 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				237B948528772E2600555B47 /* MockDecoder.swift */,
+				237B948828772F4200555B47 /* RouterTestHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		237FDB7E2875AC6400B4E4B1 /* Expandable Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,7 +421,10 @@
 		238F788B2874B1A500E2FC1C /* KaizenTests */ = {
 			isa = PBXGroup;
 			children = (
-				238F788C2874B1A500E2FC1C /* KaizenTests.swift */,
+				237B948728772E2B00555B47 /* Helper */,
+				237B947E28772DB400555B47 /* Core */,
+				237B947F28772DBA00555B47 /* Networking */,
+				237B948028772DC400555B47 /* UI */,
 			);
 			path = KaizenTests;
 			sourceTree = "<group>";
@@ -436,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				8864376477B0508D4E83F706 /* Pods_Kaizen.framework */,
+				D607D4D52D8A1E448D23A2BA /* Pods_KaizenTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -447,6 +526,8 @@
 				9F035A943D90C5683BB3DC78 /* Pods-Kaizen.release.xcconfig */,
 				F9F183AB93A10E82CA3C5829 /* Pods-Kaizen-KaizenTests.debug.xcconfig */,
 				880B5B82CD1C2A7B1BCA05FE /* Pods-Kaizen-KaizenTests.release.xcconfig */,
+				AE407C35688D29204814570C /* Pods-KaizenTests.debug.xcconfig */,
+				9734374CCDFAE74A03750FAA /* Pods-KaizenTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -478,9 +559,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 238F789F2874B1A500E2FC1C /* Build configuration list for PBXNativeTarget "KaizenTests" */;
 			buildPhases = (
+				AC007927516477C3D3DE9B83 /* [CP] Check Pods Manifest.lock */,
 				238F78842874B1A500E2FC1C /* Sources */,
 				238F78852874B1A500E2FC1C /* Frameworks */,
 				238F78862874B1A500E2FC1C /* Resources */,
+				D9C3503B6AC5CC09BF8DD8DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -508,6 +591,7 @@
 					};
 					238F78872874B1A500E2FC1C = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = 238F78712874B1A400E2FC1C;
 					};
 				};
@@ -597,6 +681,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AC007927516477C3D3DE9B83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaizenTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9C3503B6AC5CC09BF8DD8DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaizenTests/Pods-KaizenTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaizenTests/Pods-KaizenTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaizenTests/Pods-KaizenTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FBD912E431D1E2ABB31D8F10 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -660,7 +783,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				238F788D2874B1A500E2FC1C /* KaizenTests.swift in Sources */,
+				237B948B28772F8700555B47 /* HTTPGeneralRouterTests.swift in Sources */,
+				237B948928772F4200555B47 /* RouterTestHelper.swift in Sources */,
+				237B948D28772FA600555B47 /* APIResponseSportsTests.swift in Sources */,
+				237B948628772E2600555B47 /* MockDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,17 +998,25 @@
 		};
 		238F78A02874B1A500E2FC1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE407C35688D29204814570C /* Pods-KaizenTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WSJAKJDZQW;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vorisis.KaizenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaizen.app/Kaizen";
@@ -891,13 +1025,20 @@
 		};
 		238F78A12874B1A500E2FC1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9734374CCDFAE74A03750FAA /* Pods-KaizenTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WSJAKJDZQW;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vorisis.KaizenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
