@@ -18,6 +18,9 @@
 		231A6C542874FB0E00E65541 /* UICollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A6C532874FB0E00E65541 /* UICollectionExtensions.swift */; };
 		231A6C592875006800E65541 /* SportEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A6C572875006800E65541 /* SportEventCollectionViewCell.swift */; };
 		231A6C5A2875006800E65541 /* SportEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231A6C582875006800E65541 /* SportEventCollectionViewCell.xib */; };
+		232C0306287738A4003FD7AA /* UIKitExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C0305287738A4003FD7AA /* UIKitExtensionTests.swift */; };
+		232C030828774686003FD7AA /* FoundationExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C030728774686003FD7AA /* FoundationExtensionsTests.swift */; };
+		232C030B28774EB2003FD7AA /* IndexPathToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C030A28774EB2003FD7AA /* IndexPathToolsTests.swift */; };
 		2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2336A5F02874B91700E696DD /* .swiftlint.yml */; };
 		2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336A5FC2874BFE300E696DD /* HTTPClient.swift */; };
 		237B948628772E2600555B47 /* MockDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948528772E2600555B47 /* MockDecoder.swift */; };
@@ -78,6 +81,9 @@
 		231A6C532874FB0E00E65541 /* UICollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionExtensions.swift; sourceTree = "<group>"; };
 		231A6C572875006800E65541 /* SportEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventCollectionViewCell.swift; sourceTree = "<group>"; };
 		231A6C582875006800E65541 /* SportEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportEventCollectionViewCell.xib; sourceTree = "<group>"; };
+		232C0305287738A4003FD7AA /* UIKitExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensionTests.swift; sourceTree = "<group>"; };
+		232C030728774686003FD7AA /* FoundationExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensionsTests.swift; sourceTree = "<group>"; };
+		232C030A28774EB2003FD7AA /* IndexPathToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathToolsTests.swift; sourceTree = "<group>"; };
 		2336A5F02874B91700E696DD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2336A5FC2874BFE300E696DD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		237B948528772E2600555B47 /* MockDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDecoder.swift; sourceTree = "<group>"; };
@@ -184,6 +190,23 @@
 			path = "Sport Event";
 			sourceTree = "<group>";
 		};
+		232C030428773893003FD7AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				232C0305287738A4003FD7AA /* UIKitExtensionTests.swift */,
+				232C030728774686003FD7AA /* FoundationExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		232C030928774E97003FD7AA /* IndexPathTools */ = {
+			isa = PBXGroup;
+			children = (
+				232C030A28774EB2003FD7AA /* IndexPathToolsTests.swift */,
+			);
+			path = IndexPathTools;
+			sourceTree = "<group>";
+		};
 		2336A5F32874BB9800E696DD /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +298,8 @@
 		237B947E28772DB400555B47 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				232C030928774E97003FD7AA /* IndexPathTools */,
+				232C030428773893003FD7AA /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -783,9 +808,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232C0306287738A4003FD7AA /* UIKitExtensionTests.swift in Sources */,
 				237B948B28772F8700555B47 /* HTTPGeneralRouterTests.swift in Sources */,
 				237B948928772F4200555B47 /* RouterTestHelper.swift in Sources */,
 				237B948D28772FA600555B47 /* APIResponseSportsTests.swift in Sources */,
+				232C030B28774EB2003FD7AA /* IndexPathToolsTests.swift in Sources */,
+				232C030828774686003FD7AA /* FoundationExtensionsTests.swift in Sources */,
 				237B948628772E2600555B47 /* MockDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
