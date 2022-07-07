@@ -67,17 +67,6 @@ class IndexPathDataModel {
         self.sectionItems = sectionItems
     }
     
-    /// Initializes an IndexPathDataModel with one default IndexPathSectionItem. All items are included as children of that section.
-    /// Each item must have section = nil in its parameter
-    ///
-    /// - Parameters:
-    ///   - itemsArray: The IndexPathItems we need
-    init(itemsForSingleSection itemsArray: [IndexPathItem]) {
-        let nilSection = IndexPathSectionItem(identifier: IndexPathItemNilSectionIdentifier, rowHeight: 0, data: nil, children: [])
-        nilSection.children.append(contentsOf: itemsArray)
-        self.sectionItems = [nilSection]
-    }
-    
     /// Initializes an IndexPathDataModel with an array of IndexPathItems. All items are included as children of that section.
     /// IndexPathSectionItems are created and the items are grouped into children of each SectionItem
     ///
@@ -122,6 +111,9 @@ class IndexPathDataModel {
         return nil
     }
     
+    /// Get the sum of children of every section
+    /// If you initialised the datamodel with items you will get these items count
+    /// - Returns: An array of the sum of children of every section
     func items() -> [IndexPathItem] {
         var arrayToReturn: [IndexPathItem] = []
         for item in sectionItems {

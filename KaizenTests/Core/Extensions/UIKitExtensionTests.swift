@@ -7,7 +7,7 @@ import Foundation
 import XCTest
 @testable import Kaizen
 
-class UIKitExtensionTests: XCTestCase {
+class UIViewControllerExtensionTests: XCTestCase {
      
     func testNameOfController() {
         let splashController = SplashViewController.id
@@ -57,4 +57,22 @@ class UIKitExtensionTests: XCTestCase {
         
         XCTAssertEqual(titleView?.text, nil)
     }
+}
+
+// MARK: CollectionView + TableView Tests
+
+class UICollectionViewTableViewExtensionTests: XCTestCase {
+
+    func testNameOfCollectionViewCell() {
+        let splashController = SportEventCollectionViewCell.id
+        
+        XCTAssertEqual(splashController, "SportEventCollectionViewCell")
+    }
+    
+    func testNameOfTableViewCell() {
+        let splashController = CollectionViewTableViewCell.id
+        
+        XCTAssertEqual(splashController, "CollectionViewTableViewCell")
+    }
+    
 }
