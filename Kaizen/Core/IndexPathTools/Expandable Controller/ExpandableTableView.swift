@@ -15,15 +15,10 @@ class ExpandableTableViewController: UIViewController {
     }
     
     func didSelect(section: Int) {
-        if dataModel.section(atSectionIndex: section).isOpened {
-            dataModel.section(atSectionIndex: section).isOpened = false
-            let sections = IndexSet(integer: section)
-            tableView.reloadSections(sections, with: .none)
-        } else {
-            dataModel.section(atSectionIndex: section).isOpened = true
-            let sections = IndexSet(integer: section)
-            tableView.reloadSections(sections, with: .none)
-        }
+        dataModel.section(atSectionIndex: section).isOpened.toggle()
+        
+        let sections = IndexSet(integer: section)
+        tableView.reloadSections(sections, with: .none)
     }
 }
 
@@ -37,6 +32,8 @@ extension ExpandableTableViewController: UITableViewDelegate, UITableViewDataSou
         return dataModel.numberOfSections
     }
 
+    /// If section is `opened` then we want to reload section with all its children.
+    /// If section is `NOT opened` then don't want any cells so we returning 0 children and we get the expandable functionality.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if dataModel.section(atSectionIndex: section).isOpened {
             return dataModel.numberOfRows(inSection: section)

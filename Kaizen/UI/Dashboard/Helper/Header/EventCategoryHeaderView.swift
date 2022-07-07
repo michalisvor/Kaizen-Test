@@ -5,11 +5,6 @@
 
 import UIKit
 
-private enum ArrowState {
-    case up
-    case down
-}
-
 protocol EventCategoryHeaderViewDelegate: AnyObject {
     func didTapOnArrow(in section: Int)
 }
@@ -45,16 +40,10 @@ class EventCategoryHeaderView: UIView {
         sportImageView.image = data.sportType?.icon
         sportImageContainerView.isHidden = data.sportType?.icon == nil
         
-        titleLabel.text = data.sportName
+        titleLabel.attributedText = data.sportName?.style(fontName: .regular, x2FontSize: 17, color: .white)
         arrowImageView.image = isOpened ? UIImage(named: "icon_arrow_up_white") : UIImage(named: "icon_arrow_down_white")
         // To enable arrow tap for expandable uncomment bellow line
         // arrowImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(arrowImageTapped)))
-    }
-    
-    private func animateArrow(to state: ArrowState) {
-        UIView.animate(withDuration: 0.4) {
-            self.arrowImageView.transform = state == .down ? CGAffineTransform(rotationAngle: .pi) : .identity
-        }
     }
     
     @objc private func arrowImageTapped() {

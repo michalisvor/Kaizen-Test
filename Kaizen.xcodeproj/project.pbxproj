@@ -23,6 +23,12 @@
 		237FDB802875AC9400B4E4B1 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */; };
 		237FDB832875DE1C00B4E4B1 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB822875DE1C00B4E4B1 /* AppEnums.swift */; };
 		237FDB892875F84200B4E4B1 /* KaizenTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB882875F84200B4E4B1 /* KaizenTimer.swift */; };
+		237FDB8B2876269900B4E4B1 /* UIBarButtonItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB8A2876269900B4E4B1 /* UIBarButtonItemExtensions.swift */; };
+		237FDB8E28762A2400B4E4B1 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB8D28762A2400B4E4B1 /* Font.swift */; };
+		237FDB9128762A7A00B4E4B1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB9028762A7A00B4E4B1 /* Device.swift */; };
+		237FDB9328762CF200B4E4B1 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB9228762CF200B4E4B1 /* UIViewExtensions.swift */; };
+		237FDB9628763E1F00B4E4B1 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB9528763E1F00B4E4B1 /* CoreData.swift */; };
+		237FDB9928763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB9728763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld */; };
 		238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78752874B1A400E2FC1C /* AppDelegate.swift */; };
 		238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78792874B1A400E2FC1C /* SplashViewController.swift */; };
 		238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F787B2874B1A400E2FC1C /* Main.storyboard */; };
@@ -73,6 +79,12 @@
 		237FDB7F2875AC9400B4E4B1 /* ExpandableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
 		237FDB822875DE1C00B4E4B1 /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
 		237FDB882875F84200B4E4B1 /* KaizenTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaizenTimer.swift; sourceTree = "<group>"; };
+		237FDB8A2876269900B4E4B1 /* UIBarButtonItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtensions.swift; sourceTree = "<group>"; };
+		237FDB8D28762A2400B4E4B1 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		237FDB9028762A7A00B4E4B1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		237FDB9228762CF200B4E4B1 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		237FDB9528763E1F00B4E4B1 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		237FDB9828763E6800B4E4B1 /* KaizenCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KaizenCoreData.xcdatamodel; sourceTree = "<group>"; };
 		238F78722874B1A400E2FC1C /* Kaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238F78752874B1A400E2FC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238F78792874B1A400E2FC1C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +149,8 @@
 				231A6C432874F55C00E65541 /* UITableViewExtensions.swift */,
 				231A6C532874FB0E00E65541 /* UICollectionExtensions.swift */,
 				231A6C492874F5E600E65541 /* UIColorExtensions.swift */,
+				237FDB8A2876269900B4E4B1 /* UIBarButtonItemExtensions.swift */,
+				237FDB9228762CF200B4E4B1 /* UIViewExtensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -162,7 +176,9 @@
 		2336A5F32874BB9800E696DD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				237FDB9428763E1300B4E4B1 /* Core Data */,
 				237FDB872875F82B00B4E4B1 /* Timer */,
+				237FDB8F28762A6C00B4E4B1 /* Device */,
 				237FDB812875DE1100B4E4B1 /* App Enums */,
 				23CCD9D52874CCE100301D8D /* MVP */,
 				23CCD9E22874D08900301D8D /* IndexPathTools */,
@@ -202,6 +218,7 @@
 		2336A5F72874BBCB00E696DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				237FDB8C28762A1000B4E4B1 /* Font */,
 				238F787E2874B1A500E2FC1C /* Assets.xcassets */,
 				23CCD9E92874E11200301D8D /* Colors.xcassets */,
 				238F78802874B1A500E2FC1C /* LaunchScreen.storyboard */,
@@ -266,6 +283,31 @@
 				237FDB882875F84200B4E4B1 /* KaizenTimer.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		237FDB8C28762A1000B4E4B1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				237FDB8D28762A2400B4E4B1 /* Font.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		237FDB8F28762A6C00B4E4B1 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				237FDB9028762A7A00B4E4B1 /* Device.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		237FDB9428763E1300B4E4B1 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				237FDB9528763E1F00B4E4B1 /* CoreData.swift */,
+				237FDB9728763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		238F78692874B1A400E2FC1C = {
@@ -589,16 +631,22 @@
 				237FDB892875F84200B4E4B1 /* KaizenTimer.swift in Sources */,
 				23CCD9D22874CB9500301D8D /* HTTPGeneralRouter.swift in Sources */,
 				231A6C4C2874F5FE00E65541 /* CodableExtensions.swift in Sources */,
+				237FDB9128762A7A00B4E4B1 /* Device.swift in Sources */,
 				23CCD9E72874E08500301D8D /* NavigationController.swift in Sources */,
 				238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */,
 				237FDB832875DE1C00B4E4B1 /* AppEnums.swift in Sources */,
 				237FDB802875AC9400B4E4B1 /* ExpandableTableView.swift in Sources */,
 				23CCD9E12874D06000301D8D /* DashboardService.swift in Sources */,
+				237FDB9328762CF200B4E4B1 /* UIViewExtensions.swift in Sources */,
 				231A6C4E2874F61A00E65541 /* StringExtensions.swift in Sources */,
+				237FDB8E28762A2400B4E4B1 /* Font.swift in Sources */,
+				237FDB8B2876269900B4E4B1 /* UIBarButtonItemExtensions.swift in Sources */,
 				231A6C542874FB0E00E65541 /* UICollectionExtensions.swift in Sources */,
 				238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */,
 				2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */,
 				23CCD9DF2874D06000301D8D /* DashboardViewController.swift in Sources */,
+				237FDB9928763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld in Sources */,
+				237FDB9628763E1F00B4E4B1 /* CoreData.swift in Sources */,
 				23CCD9D02874C8DF00301D8D /* APIResponseSports.swift in Sources */,
 				231A6C512874F66D00E65541 /* CollectionViewTableViewCell.swift in Sources */,
 				231A6C592875006800E65541 /* SportEventCollectionViewCell.swift in Sources */,
@@ -891,6 +939,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		237FDB9728763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				237FDB9828763E6800B4E4B1 /* KaizenCoreData.xcdatamodel */,
+			);
+			currentVersion = 237FDB9828763E6800B4E4B1 /* KaizenCoreData.xcdatamodel */;
+			path = KaizenCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 238F786A2874B1A400E2FC1C /* Project object */;
 }

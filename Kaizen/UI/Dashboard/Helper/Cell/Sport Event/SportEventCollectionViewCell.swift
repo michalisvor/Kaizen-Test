@@ -40,8 +40,8 @@ class SportEventCollectionViewCell: UICollectionViewCell {
         sportEvent = data
         
         let teams = data.teams
-        teamHomeLabel.text = teams.teamHome
-        teamAwayLabel.text = teams.teamAway
+        teamHomeLabel.attributedText = teams.teamHome?.style(fontName: .regular, x2FontSize: 17, color: .white, alignment: .center)
+        teamAwayLabel.attributedText = teams.teamAway?.style(fontName: .regular, x2FontSize: 17, color: .white, alignment: .center)
         
         teamHomeLabel.isHidden = teams.teamHome == nil
         teamAwayLabel.isHidden = teams.teamAway == nil
@@ -66,19 +66,32 @@ class SportEventCollectionViewCell: UICollectionViewCell {
         var times: [String] = []
         times.append(contentsOf: ["\(hours)", "\(minutes)", "\(seconds)"])
         
-        timeTitleLabel.text = times.joined(separator: ":")
+        timeTitleLabel.attributedText = times.joined(separator: ":").style(fontName: .regular, x2FontSize: 17, color: .white, alignment: .center)
     }
     
     private func setUpImage(isFavorite: Bool) {
         favoriteImageView.image = isFavorite ? UIImage(named: "icon_star_filled") : UIImage(named: "icon_star_unfilled")
     }
     
+    private func saveToCoreData(event: APIResponseSportEvent) {
+
+        if event.isFavorite {
+            CoreDataManager.shared.createFavoriteEvent(sportEvent: event)
+        } else {
+            CoreDataManager.shared.deleteFavoriteEvent(eventId: event.eventId ?? "")
+        }
+    }
+    
     @objc private func favoriteTapped(_ sender: UITapGestureRecognizer) {
         guard let imageView = sender.view as? FavoriteUIImageView, let event = imageView.event else { return }
         
-        // I will change here the isFavorite property and now by the class type the value has been updated everywhere.
-        event.isFavorite.toggle()
-        setUpImage(isFavorite: event.isFavorite)
-        delegate?.didChangeEvent(id: event.eventId ?? "")
+        // Added pop animation
+        pop {
+            // I will change here the isFavorite property and now by the class type the value has been updated everywhere.
+            event.isFavorite.toggle()
+            self.setUpImage(isFavorite: event.isFavorite)
+            self.saveToCoreData(event: event)
+            self.delegate?.didChangeEvent(id: event.eventId ?? "")
+        }
     }
 }

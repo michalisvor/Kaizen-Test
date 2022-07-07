@@ -12,10 +12,14 @@ class CollectionViewTableViewCell: UITableViewCell {
     var dataModel: IndexPathDataModel = IndexPathDataModel(items: [])
     
     private var events: [APIResponseSportEvent] = []
-    
+    var savedEvents: [String] = []
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setUp()
+        
+        // We call it here to reduce times that the device asks data from CoreData
+        savedEvents = CoreDataManager.shared.getFavoriteEvents().compactMap({ $0.eventId })
     }
     
     private func setUp() {
@@ -28,16 +32,22 @@ class CollectionViewTableViewCell: UITableViewCell {
         var items: [IndexPathItem] = []
         
         for sportEvent in sportEvents {
+            if savedEvents.contains(sportEvent.eventId ?? "") {
+                sportEvent.isFavorite = true
+            }
             items.append(IndexPathItem(cellIdentifier: SportEventCollectionViewCell.id, data: sportEvent))
         }
         
         items.sort { ($0.data as? APIResponseSportEvent)?.isFavorite == true && ($1.data as? APIResponseSportEvent)?.isFavorite == false }
         
+        // We remove all savedEvents and continue the local functionality for favorites
+        savedEvents.removeAll()
         dataModel = IndexPathDataModel(items: items)
         collectionView.registerAll(from: dataModel)
         collectionView.reloadData()
     }
     
+    /// Finds all visible cells to update the timer and avoid delegates to every cell that has a timing label
     func updateTimers() {
         let visibleCells = collectionView.visibleCells
         

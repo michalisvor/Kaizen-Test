@@ -60,8 +60,7 @@ extension UIViewController {
     func prepareNavigationTitle(_ title: String? = nil, color: UIColor = .white) {
         guard let title = title else { navigationItem.titleView = nil ; return }
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 70, height: 30))
-        titleLabel.text = title
-        titleLabel.textColor = color
+        titleLabel.attributedText = title.style(fontName: .bold, x2FontSize: 19, color: color, alignment: .center)
         navigationItem.titleView = titleLabel
     }
 }

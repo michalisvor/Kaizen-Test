@@ -28,6 +28,12 @@ extension UITableView {
         }
     }
     
+    /// By patern I chose to use TableViewCell as a suffix for every cell if cellIdentifier doesn't contains TableViewCell then
+    /// there are 2 possible scenarios
+    /// 1. We put unique identifiers (better for textfields)
+    /// 2. Maybe someone used wrong suffix
+    /// Either way there isn't a problem to register 2 or more times a cell
+    /// `_nibMap` finds every registered cell in tableView
     private var registeredNibs: [IndexPathCellProperties] {
         guard let nibDictionary = value(forKey: "_nibMap") as? [String: UINib] else { return [] }
         var nibModelArray: [IndexPathCellProperties] = []

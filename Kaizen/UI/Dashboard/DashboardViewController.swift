@@ -10,6 +10,8 @@ class DashboardViewController: ExpandableTableViewController, ControllerType {
     typealias PresenterClass = DashboardPresenter
     var presenter: DashboardPresenter!
         
+    var refreshControl: UIRefreshControl! = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -21,7 +23,28 @@ class DashboardViewController: ExpandableTableViewController, ControllerType {
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true
         navigationController?.setUpWithBlueBackgroundColor()
+        navigationItem.rightBarButtonItem = UIBarButtonItem.imageItem(imageName: "icon_expand", target: self, action: #selector(expandAllTapped))
+        
         prepareNavigationTitle("Stoiximan")
+        setupPullToRefresh()
+    }
+    
+    private func setupPullToRefresh() {
+        refreshControl.tintColor = .white
+        refreshControl.addTarget(self, action: #selector(refreshControllePulled), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc private func refreshControllePulled(_ sender: UIRefreshControl) {
+        presenter.getEvents()
+    }
+    
+    /// Check if every section is expanded then call createDataModel with `shouldOpenAllSections` false to collapse them.
+    /// If even one section is collapsed I firstly expand them all and only if every section is expanded I collapse them.
+    @objc private func expandAllTapped() {
+        guard dataModel.sectionItems.count > 0 else { return }
+        let areAllSectionsExpanded = dataModel.sectionItems.filter({ $0.isOpened }).count == dataModel.numberOfSections
+        createDataModel(with: presenter.sports, shouldOpenAllSections: !areAllSectionsExpanded)
     }
     
     @objc private func sectionTapped(_ sender: UITapGestureRecognizer) {
@@ -88,6 +111,7 @@ extension DashboardViewController: EventCategoryHeaderViewDelegate {
 
 extension DashboardViewController: KaizenTimerDelegate {
     
+    /// Finds all visible cells to update the timer and avoid delegates to every cell that has a timing label
     func didUpdateTimer() {
         let visibleCells = tableView.visibleCells
         
