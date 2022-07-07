@@ -96,4 +96,31 @@ class IndexPathToolsTests: XCTestCase {
 
         XCTAssertTrue(item3 != item4)
     }
+    
+    func testClearAllSections() {
+        let item = IndexPathItem(cellIdentifier: "cellId")
+        let sectionItem = IndexPathSectionItem(identifier: "section", children: [item, item])
+
+        let dataModel = IndexPathDataModel(sectionItems: [sectionItem, sectionItem])
+
+        dataModel.clearAll()
+        XCTAssertEqual(dataModel.items().count, 0)
+    }
+    
+    func testNumberOfSections() {
+        let item = IndexPathItem(cellIdentifier: "cellId")
+        let sectionItem = IndexPathSectionItem(identifier: "section", children: [item, item, item])
+        let sectionItem2 = IndexPathSectionItem(identifier: "section2", children: [item, item])
+
+        let dataModel = IndexPathDataModel(sectionItems: [sectionItem, sectionItem2])
+
+        let numberOfSections = dataModel.numberOfSections
+        let numberOfRowsInSection1 = dataModel.numberOfRows(inSection: 0)
+        let numberOfRowsInSection2 = dataModel.numberOfRows(inSection: 1)
+
+        XCTAssertEqual(numberOfSections, 2)
+        XCTAssertEqual(numberOfRowsInSection1, 3)
+        XCTAssertEqual(numberOfRowsInSection2, 2)
+    }
+
 }

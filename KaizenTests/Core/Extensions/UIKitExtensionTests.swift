@@ -76,3 +76,17 @@ class UICollectionViewTableViewExtensionTests: XCTestCase {
     }
     
 }
+
+class UIViewExtensionTests: XCTestCase {
+    
+    func testPopView() {
+        let view = UIImageView()
+        
+        let expectation = XCTestExpectation()
+        view.pop {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 0.3)
+    }
+}

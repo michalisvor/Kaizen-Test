@@ -21,6 +21,7 @@
 		232C0306287738A4003FD7AA /* UIKitExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C0305287738A4003FD7AA /* UIKitExtensionTests.swift */; };
 		232C030828774686003FD7AA /* FoundationExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C030728774686003FD7AA /* FoundationExtensionsTests.swift */; };
 		232C030B28774EB2003FD7AA /* IndexPathToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C030A28774EB2003FD7AA /* IndexPathToolsTests.swift */; };
+		232C030E2877679F003FD7AA /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C030D2877679F003FD7AA /* CoreDataTests.swift */; };
 		2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2336A5F02874B91700E696DD /* .swiftlint.yml */; };
 		2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336A5FC2874BFE300E696DD /* HTTPClient.swift */; };
 		237B948628772E2600555B47 /* MockDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948528772E2600555B47 /* MockDecoder.swift */; };
@@ -84,6 +85,7 @@
 		232C0305287738A4003FD7AA /* UIKitExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensionTests.swift; sourceTree = "<group>"; };
 		232C030728774686003FD7AA /* FoundationExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensionsTests.swift; sourceTree = "<group>"; };
 		232C030A28774EB2003FD7AA /* IndexPathToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathToolsTests.swift; sourceTree = "<group>"; };
+		232C030D2877679F003FD7AA /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		2336A5F02874B91700E696DD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2336A5FC2874BFE300E696DD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		237B948528772E2600555B47 /* MockDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDecoder.swift; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 			path = IndexPathTools;
 			sourceTree = "<group>";
 		};
+		232C030C28776765003FD7AA /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				232C030D2877679F003FD7AA /* CoreDataTests.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		2336A5F32874BB9800E696DD /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +308,7 @@
 		237B947E28772DB400555B47 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				232C030C28776765003FD7AA /* Core Data */,
 				232C030928774E97003FD7AA /* IndexPathTools */,
 				232C030428773893003FD7AA /* Extensions */,
 			);
@@ -812,6 +823,7 @@
 				237B948B28772F8700555B47 /* HTTPGeneralRouterTests.swift in Sources */,
 				237B948928772F4200555B47 /* RouterTestHelper.swift in Sources */,
 				237B948D28772FA600555B47 /* APIResponseSportsTests.swift in Sources */,
+				232C030E2877679F003FD7AA /* CoreDataTests.swift in Sources */,
 				232C030B28774EB2003FD7AA /* IndexPathToolsTests.swift in Sources */,
 				232C030828774686003FD7AA /* FoundationExtensionsTests.swift in Sources */,
 				237B948628772E2600555B47 /* MockDecoder.swift in Sources */,
