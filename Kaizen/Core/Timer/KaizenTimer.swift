@@ -41,6 +41,14 @@ final class KaizenTimer {
         return delegates.allObjects.compactMap({ $0 as? KaizenTimerDelegate })
     }
     
+    func getTimer() -> Timer? {
+        return timer
+    }
+    
+    func getDelegatesCount() -> Int {
+        return getAllDelegates().count
+    }
+    
     @objc private func updateTimer() {
         getAllDelegates().forEach { $0.didUpdateTimer() }
     }

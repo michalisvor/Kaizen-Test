@@ -46,6 +46,10 @@ class EventCategoryHeaderView: UIView {
         // arrowImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(arrowImageTapped)))
     }
     
+    func getArrowImage() -> UIImage? {
+        return arrowImageView.image
+    }
+    
     @objc private func arrowImageTapped() {
         delegate?.didTapOnArrow(in: self.tag)
     }

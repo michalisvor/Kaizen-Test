@@ -22,9 +22,24 @@
 		232C030828774686003FD7AA /* FoundationExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C030728774686003FD7AA /* FoundationExtensionsTests.swift */; };
 		232C030B28774EB2003FD7AA /* IndexPathToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C030A28774EB2003FD7AA /* IndexPathToolsTests.swift */; };
 		232C030E2877679F003FD7AA /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C030D2877679F003FD7AA /* CoreDataTests.swift */; };
+		232C031228777251003FD7AA /* sports_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 232C031128777251003FD7AA /* sports_success.json */; };
+		232C031428777281003FD7AA /* DashboardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C031328777281003FD7AA /* DashboardViewControllerTests.swift */; };
+		232C03162877728E003FD7AA /* DashboardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C03152877728E003FD7AA /* DashboardViewTests.swift */; };
+		232C03182877729A003FD7AA /* DashboardServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C03172877729A003FD7AA /* DashboardServiceTests.swift */; };
+		232C031A28777384003FD7AA /* DashboardPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C031928777384003FD7AA /* DashboardPresenterTests.swift */; };
+		232C032028777BBD003FD7AA /* MockDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948528772E2600555B47 /* MockDecoder.swift */; };
+		232C032128777BD2003FD7AA /* sports_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 232C031128777251003FD7AA /* sports_success.json */; };
+		232C032528777CCF003FD7AA /* sports_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 232C032428777CCF003FD7AA /* sports_empty.json */; };
+		232C032628777E93003FD7AA /* sports_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 232C032428777CCF003FD7AA /* sports_empty.json */; };
+		232C03292877832A003FD7AA /* KaizenTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C03282877832A003FD7AA /* KaizenTimerTests.swift */; };
+		232C032D28778F22003FD7AA /* EventCategoryHeaderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C032C28778F22003FD7AA /* EventCategoryHeaderViewTests.swift */; };
+		232C0330287790D5003FD7AA /* SportEventCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C032F287790D5003FD7AA /* SportEventCollectionViewCellTests.swift */; };
+		232C0332287791A2003FD7AA /* sport_event.json in Resources */ = {isa = PBXBuildFile; fileRef = 232C0331287791A2003FD7AA /* sport_event.json */; };
+		232C03332877920A003FD7AA /* sport_event.json in Resources */ = {isa = PBXBuildFile; fileRef = 232C0331287791A2003FD7AA /* sport_event.json */; };
+		232C0336287798E6003FD7AA /* CellsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C0335287798E6003FD7AA /* CellsController.swift */; };
+		232C033828779CC1003FD7AA /* CollectionViewTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232C033728779CC1003FD7AA /* CollectionViewTableViewCellTests.swift */; };
 		2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2336A5F02874B91700E696DD /* .swiftlint.yml */; };
 		2336A5FD2874BFE300E696DD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336A5FC2874BFE300E696DD /* HTTPClient.swift */; };
-		237B948628772E2600555B47 /* MockDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948528772E2600555B47 /* MockDecoder.swift */; };
 		237B948928772F4200555B47 /* RouterTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948828772F4200555B47 /* RouterTestHelper.swift */; };
 		237B948B28772F8700555B47 /* HTTPGeneralRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948A28772F8700555B47 /* HTTPGeneralRouterTests.swift */; };
 		237B948D28772FA600555B47 /* APIResponseSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B948C28772FA600555B47 /* APIResponseSportsTests.swift */; };
@@ -86,6 +101,18 @@
 		232C030728774686003FD7AA /* FoundationExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensionsTests.swift; sourceTree = "<group>"; };
 		232C030A28774EB2003FD7AA /* IndexPathToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathToolsTests.swift; sourceTree = "<group>"; };
 		232C030D2877679F003FD7AA /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		232C031128777251003FD7AA /* sports_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sports_success.json; sourceTree = "<group>"; };
+		232C031328777281003FD7AA /* DashboardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewControllerTests.swift; sourceTree = "<group>"; };
+		232C03152877728E003FD7AA /* DashboardViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewTests.swift; sourceTree = "<group>"; };
+		232C03172877729A003FD7AA /* DashboardServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardServiceTests.swift; sourceTree = "<group>"; };
+		232C031928777384003FD7AA /* DashboardPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterTests.swift; sourceTree = "<group>"; };
+		232C032428777CCF003FD7AA /* sports_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sports_empty.json; sourceTree = "<group>"; };
+		232C03282877832A003FD7AA /* KaizenTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaizenTimerTests.swift; sourceTree = "<group>"; };
+		232C032C28778F22003FD7AA /* EventCategoryHeaderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoryHeaderViewTests.swift; sourceTree = "<group>"; };
+		232C032F287790D5003FD7AA /* SportEventCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportEventCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		232C0331287791A2003FD7AA /* sport_event.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sport_event.json; sourceTree = "<group>"; };
+		232C0335287798E6003FD7AA /* CellsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsController.swift; sourceTree = "<group>"; };
+		232C033728779CC1003FD7AA /* CollectionViewTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCellTests.swift; sourceTree = "<group>"; };
 		2336A5F02874B91700E696DD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2336A5FC2874BFE300E696DD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		237B948528772E2600555B47 /* MockDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDecoder.swift; sourceTree = "<group>"; };
@@ -217,6 +244,71 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		232C030F287771D1003FD7AA /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				232C032A28778F01003FD7AA /* Helper */,
+				232C031028777234003FD7AA /* Mock Data */,
+				232C031328777281003FD7AA /* DashboardViewControllerTests.swift */,
+				232C03152877728E003FD7AA /* DashboardViewTests.swift */,
+				232C03172877729A003FD7AA /* DashboardServiceTests.swift */,
+				232C031928777384003FD7AA /* DashboardPresenterTests.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		232C031028777234003FD7AA /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+				232C031128777251003FD7AA /* sports_success.json */,
+				232C032428777CCF003FD7AA /* sports_empty.json */,
+				232C0331287791A2003FD7AA /* sport_event.json */,
+			);
+			path = "Mock Data";
+			sourceTree = "<group>";
+		};
+		232C03272877831B003FD7AA /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				232C03282877832A003FD7AA /* KaizenTimerTests.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		232C032A28778F01003FD7AA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				232C032B28778F06003FD7AA /* Header */,
+				232C032E287790BE003FD7AA /* Cell */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		232C032B28778F06003FD7AA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				232C032C28778F22003FD7AA /* EventCategoryHeaderViewTests.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		232C032E287790BE003FD7AA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				232C032F287790D5003FD7AA /* SportEventCollectionViewCellTests.swift */,
+				232C033728779CC1003FD7AA /* CollectionViewTableViewCellTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		232C0334287798AA003FD7AA /* Cells Controller */ = {
+			isa = PBXGroup;
+			children = (
+				232C0335287798E6003FD7AA /* CellsController.swift */,
+			);
+			path = "Cells Controller";
+			sourceTree = "<group>";
+		};
 		2336A5F32874BB9800E696DD /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +400,8 @@
 		237B947E28772DB400555B47 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				232C0334287798AA003FD7AA /* Cells Controller */,
+				232C03272877831B003FD7AA /* Timer */,
 				232C030C28776765003FD7AA /* Core Data */,
 				232C030928774E97003FD7AA /* IndexPathTools */,
 				232C030428773893003FD7AA /* Extensions */,
@@ -327,6 +421,7 @@
 		237B948028772DC400555B47 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				232C030F287771D1003FD7AA /* Dashboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -659,8 +754,11 @@
 				23CCD9F12874F39800301D8D /* EventCategoryHeaderView.xib in Resources */,
 				23CCD9EA2874E11200301D8D /* Colors.xcassets in Resources */,
 				231A6C522874F66D00E65541 /* CollectionViewTableViewCell.xib in Resources */,
+				232C032128777BD2003FD7AA /* sports_success.json in Resources */,
 				2336A5F12874B91700E696DD /* .swiftlint.yml in Resources */,
 				231A6C5A2875006800E65541 /* SportEventCollectionViewCell.xib in Resources */,
+				232C03332877920A003FD7AA /* sport_event.json in Resources */,
+				232C032628777E93003FD7AA /* sports_empty.json in Resources */,
 				238F78822874B1A500E2FC1C /* LaunchScreen.storyboard in Resources */,
 				238F787F2874B1A500E2FC1C /* Assets.xcassets in Resources */,
 				238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */,
@@ -671,6 +769,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232C032528777CCF003FD7AA /* sports_empty.json in Resources */,
+				232C0332287791A2003FD7AA /* sport_event.json in Resources */,
+				232C031228777251003FD7AA /* sports_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,14 +920,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232C0330287790D5003FD7AA /* SportEventCollectionViewCellTests.swift in Sources */,
+				232C032028777BBD003FD7AA /* MockDecoder.swift in Sources */,
 				232C0306287738A4003FD7AA /* UIKitExtensionTests.swift in Sources */,
 				237B948B28772F8700555B47 /* HTTPGeneralRouterTests.swift in Sources */,
 				237B948928772F4200555B47 /* RouterTestHelper.swift in Sources */,
+				232C03292877832A003FD7AA /* KaizenTimerTests.swift in Sources */,
 				237B948D28772FA600555B47 /* APIResponseSportsTests.swift in Sources */,
+				232C033828779CC1003FD7AA /* CollectionViewTableViewCellTests.swift in Sources */,
+				232C0336287798E6003FD7AA /* CellsController.swift in Sources */,
+				232C031428777281003FD7AA /* DashboardViewControllerTests.swift in Sources */,
+				232C03162877728E003FD7AA /* DashboardViewTests.swift in Sources */,
 				232C030E2877679F003FD7AA /* CoreDataTests.swift in Sources */,
+				232C031A28777384003FD7AA /* DashboardPresenterTests.swift in Sources */,
+				232C032D28778F22003FD7AA /* EventCategoryHeaderViewTests.swift in Sources */,
 				232C030B28774EB2003FD7AA /* IndexPathToolsTests.swift in Sources */,
 				232C030828774686003FD7AA /* FoundationExtensionsTests.swift in Sources */,
-				237B948628772E2600555B47 /* MockDecoder.swift in Sources */,
+				232C03182877729A003FD7AA /* DashboardServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
