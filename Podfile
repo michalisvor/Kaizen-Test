@@ -1,10 +1,15 @@
 platform :ios, '12.0'
 
+use_frameworks!
+inhibit_all_warnings!
+
 target 'Kaizen' do
-  use_frameworks!
-  inhibit_all_warnings!
-  
   pod 'SwiftLint', '0.47.0'
+  pod 'Alamofire'
+  pod 'PromiseKit'
+end
+
+target 'KaizenTests' do
   pod 'Alamofire'
   pod 'PromiseKit'
 end

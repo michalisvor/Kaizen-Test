@@ -22,10 +22,6 @@ extension UICollectionView {
             register(UINib(nibName: item.nibName, bundle: nil), forCellWithReuseIdentifier: item.id)
         }
     }
-    
-    func registerItem(id: String, nibName: String) {
-        register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: id)
-    }
 }
 
 extension UICollectionViewCell {

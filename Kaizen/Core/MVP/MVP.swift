@@ -12,7 +12,21 @@ public protocol ControllerType: SetUpType {
 }
 
 // MARK: View Set Up.
-public protocol ViewType where Self: UIViewController { }
+public protocol ViewType where Self: UIViewController {
+    func showLoadingView()
+    func hideLoadingView()
+}
+
+extension ViewType {
+    
+    func showLoadingView() {
+        showLoader()
+    }
+    
+    func hideLoadingView() {
+        hideLoader()
+    }
+}
 
 // MARK: Service Set Up.
 public protocol ServiceType: AnyObject {

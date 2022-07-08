@@ -18,7 +18,7 @@ enum SportType: String {
     case badminton = "BADM"
     
     /// I named all icons with prefix `icon_` and the rawValue lowercased so I dont have to switch all cases.
-    var icon: UIImage? {
-        return UIImage(named: "icon_\(rawValue.lowercased())")
+    var iconName: String? {
+        return "icon_\(rawValue.lowercased())"
     }
 }

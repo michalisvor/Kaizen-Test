@@ -37,13 +37,17 @@ class EventCategoryHeaderView: UIView {
     }
 
     func setUp(data: APIResponseSport, isOpened: Bool) {
-        sportImageView.image = data.sportType?.icon
-        sportImageContainerView.isHidden = data.sportType?.icon == nil
+        sportImageView.image = UIImage(named: data.sportType?.iconName ?? "")
+        sportImageContainerView.isHidden = data.sportType?.iconName == nil
         
         titleLabel.attributedText = data.sportName?.style(fontName: .regular, x2FontSize: 17, color: .white)
         arrowImageView.image = isOpened ? UIImage(named: "icon_arrow_up_white") : UIImage(named: "icon_arrow_down_white")
         // To enable arrow tap for expandable uncomment bellow line
         // arrowImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(arrowImageTapped)))
+    }
+    
+    func getArrowImage() -> UIImage? {
+        return arrowImageView.image
     }
     
     @objc private func arrowImageTapped() {

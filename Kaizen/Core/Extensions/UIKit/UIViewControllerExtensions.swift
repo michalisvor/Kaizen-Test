@@ -42,7 +42,7 @@ extension UIViewController {
     }
     
     // MARK: Show and Hide a simple loader
-    func showLoadingView() {
+    func showLoader() {
         let indicator = UIActivityIndicatorView(style: .whiteLarge)
         indicator.startAnimating()
         indicator.color = .white
@@ -50,7 +50,7 @@ extension UIViewController {
         view.addSubview(indicator)
     }
     
-    func hideLoadingView() {
+    func hideLoader() {
         for view in view.subviews where view is UIActivityIndicatorView {
             view.removeFromSuperview()
         }

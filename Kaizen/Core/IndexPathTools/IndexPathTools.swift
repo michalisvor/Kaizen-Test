@@ -67,17 +67,6 @@ class IndexPathDataModel {
         self.sectionItems = sectionItems
     }
     
-    /// Initializes an IndexPathDataModel with one default IndexPathSectionItem. All items are included as children of that section.
-    /// Each item must have section = nil in its parameter
-    ///
-    /// - Parameters:
-    ///   - itemsArray: The IndexPathItems we need
-    init(itemsForSingleSection itemsArray: [IndexPathItem]) {
-        let nilSection = IndexPathSectionItem(identifier: IndexPathItemNilSectionIdentifier, rowHeight: 0, data: nil, children: [])
-        nilSection.children.append(contentsOf: itemsArray)
-        self.sectionItems = [nilSection]
-    }
-    
     /// Initializes an IndexPathDataModel with an array of IndexPathItems. All items are included as children of that section.
     /// IndexPathSectionItems are created and the items are grouped into children of each SectionItem
     ///
@@ -122,6 +111,9 @@ class IndexPathDataModel {
         return nil
     }
     
+    /// Get the sum of children of every section
+    /// If you initialised the datamodel with items you will get these items count
+    /// - Returns: An array of the sum of children of every section
     func items() -> [IndexPathItem] {
         var arrayToReturn: [IndexPathItem] = []
         for item in sectionItems {
@@ -130,30 +122,9 @@ class IndexPathDataModel {
         return arrayToReturn
     }
     
-    func item(forIdentifier identifier: String) -> IndexPathItem? {
-        var matchesFoundArray = [IndexPathItem]()
-        for sectionItem in sectionItems {
-            let results = sectionItem.children.filter { $0.identifier == identifier }
-            matchesFoundArray.append(contentsOf: results)
-        }
-        if matchesFoundArray.count > 1 {
-            return nil
-        }
-        return matchesFoundArray.first
-    }
-    
     func item(at indexPath: IndexPath) -> IndexPathItem? {
         let section = sectionItems[indexPath.section]
         return section.children[indexPath.row]
-    }
-    
-    func items(forCellIdentifier cellIdentifier: String) -> [IndexPathItem] {
-        var itemsToReturn = [IndexPathItem]()
-        for sectionItem in sectionItems {
-            let results = sectionItem.children.filter { $0.cellIdentifier == cellIdentifier }
-            itemsToReturn.append(contentsOf: results)
-        }
-        return itemsToReturn
     }
     
     func items(forSection section: Int) -> [IndexPathItem] {
@@ -168,28 +139,6 @@ class IndexPathDataModel {
         return sectionItems[sectionIndex]
     }
     
-    func section(ofIndexPathItem item: IndexPathItem) -> Int {
-        for i in 0..<sectionItems.count {
-            for j in 0..<sectionItems[i].children.count {
-                if item == sectionItems[i].children[j] {
-                    return i
-                }
-            }
-        }
-        return 0
-    }
-    
-    func indexOfItemInSection(ofIndexPathItem item: IndexPathItem) -> Int? {
-        for i in 0..<sectionItems.count {
-            for j in 0..<sectionItems[i].children.count {
-                if item == sectionItems[i].children[j] {
-                    return j
-                }
-            }
-        }
-        return nil
-    }
-    
     func indexPath(ofItem item: IndexPathItem) -> IndexPath? {
         for i in 0..<sectionItems.count {
             for j in 0..<sectionItems[i].children.count {
@@ -201,18 +150,10 @@ class IndexPathDataModel {
         return nil
     }
     
-    func removeDuplicateSections() {
-        sectionItems = sectionItems.withoutDuplicates()
-    }
-    
     func clearAll() {
         self.sectionItems.removeAll()
         let nilSection = IndexPathSectionItem(identifier: IndexPathItemNilSectionIdentifier, rowHeight: 0, data: nil, children: [])
         self.sectionItems = [nilSection]
-    }
-    
-    func lastChildIndex(of section: Int) -> Int {
-        return sectionItems[section].children.count - 1
     }
 }
 
@@ -224,16 +165,5 @@ extension IndexPathSectionItem: Equatable {
 extension IndexPathItem: Equatable {
     static func == (lhs: IndexPathItem, rhs: IndexPathItem) -> Bool {
         return lhs.identifier == rhs.identifier
-    }
-}
-
-extension Array where Element: Equatable {
-    
-    func withoutDuplicates() -> Array {
-        return reduce(into: []) { result, element in
-            if !result.contains(element) {
-                result.append(element)
-            }
-        }
     }
 }

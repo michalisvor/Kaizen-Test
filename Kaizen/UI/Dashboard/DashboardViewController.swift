@@ -18,7 +18,7 @@ class DashboardViewController: ExpandableTableViewController, ControllerType {
         presenter.getEvents()
     }
    
-    private func setUp() {
+    func setUp() {
         KaizenTimer.shared.addDelegate(self)
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true
