@@ -21,6 +21,7 @@ extension DashboardPresenterType where ViewClass: DashboardViewType, ServiceClas
             self.view?.hideLoadingView()
         }.catch { error in
             print(error)
+            self.view?.createEmptyDataModel(hasNetworkError: true)
         }
     }
 }

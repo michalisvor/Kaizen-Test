@@ -9,6 +9,7 @@ protocol DashboardViewType: ViewType {
     var tableView: UITableView! { get set }
     var dataModel: IndexPathDataModel { get set }
     var refreshControl: UIRefreshControl! { get set }
+    func shouldEnableExpandAll(_ value: Bool)
 }
 
 extension DashboardViewType {
@@ -25,9 +26,31 @@ extension DashboardViewType {
             items.append(headerItem)
         }
         
+        if items.isEmpty {
+            createEmptyDataModel()
+            return
+        }
+        
+        shouldEnableExpandAll(true)
+        reload(items)
+    }
+    
+    func createEmptyDataModel(hasNetworkError: Bool = false) {
+        shouldEnableExpandAll(false)
+        var items: [IndexPathSectionItem] = []
+        
+        let title = hasNetworkError ? "Κάτι πήγε στραβά παρακαλώ δοκιμάστε αργότερα" : "Δεν βρέθηκαν αγώνες, δοκιμάστε αργότερα"
+        
+        let child = IndexPathItem(cellIdentifier: DashboardEmptyViewTableViewCell.id, data: DashboardEmptyViewModel(title: title, isRefreshHidden: !hasNetworkError))
+        items.append(IndexPathSectionItem(identifier: "emptySection", children: [child]))
+        
+        reload(items)
+    }
+    
+    func reload(_ sectionItems: [IndexPathSectionItem]) {
         refreshControl.endRefreshing()
 
-        dataModel = IndexPathDataModel(sectionItems: items)
+        dataModel = IndexPathDataModel(sectionItems: sectionItems)
         tableView.registerAll(from: dataModel)
         tableView.reloadData()
     }

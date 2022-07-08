@@ -52,7 +52,6 @@ class DashboardViewTestsMock: XCTestCase {
         wait(for: [expectation], timeout: 2)
     }
     
-    // TODO: Add Empty view
     func testGetEventsFailure() {
         let presenter = createPresenter()
         presenter.service.generatorError = true

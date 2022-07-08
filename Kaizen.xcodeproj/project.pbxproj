@@ -52,6 +52,8 @@
 		237FDB9328762CF200B4E4B1 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB9228762CF200B4E4B1 /* UIViewExtensions.swift */; };
 		237FDB9628763E1F00B4E4B1 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB9528763E1F00B4E4B1 /* CoreData.swift */; };
 		237FDB9928763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB9728763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld */; };
+		23836EF2287886C5005BAF7F /* DashboardEmptyViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23836EF0287886C5005BAF7F /* DashboardEmptyViewTableViewCell.swift */; };
+		23836EF3287886C5005BAF7F /* DashboardEmptyViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23836EF1287886C5005BAF7F /* DashboardEmptyViewTableViewCell.xib */; };
 		238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78752874B1A400E2FC1C /* AppDelegate.swift */; };
 		238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78792874B1A400E2FC1C /* SplashViewController.swift */; };
 		238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F787B2874B1A400E2FC1C /* Main.storyboard */; };
@@ -128,6 +130,8 @@
 		237FDB9228762CF200B4E4B1 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		237FDB9528763E1F00B4E4B1 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		237FDB9828763E6800B4E4B1 /* KaizenCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KaizenCoreData.xcdatamodel; sourceTree = "<group>"; };
+		23836EF0287886C5005BAF7F /* DashboardEmptyViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardEmptyViewTableViewCell.swift; sourceTree = "<group>"; };
+		23836EF1287886C5005BAF7F /* DashboardEmptyViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardEmptyViewTableViewCell.xib; sourceTree = "<group>"; };
 		238F78722874B1A400E2FC1C /* Kaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238F78752874B1A400E2FC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238F78792874B1A400E2FC1C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -516,6 +520,15 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		23836EEF287886A6005BAF7F /* Empty Data */ = {
+			isa = PBXGroup;
+			children = (
+				23836EF0287886C5005BAF7F /* DashboardEmptyViewTableViewCell.swift */,
+				23836EF1287886C5005BAF7F /* DashboardEmptyViewTableViewCell.xib */,
+			);
+			path = "Empty Data";
+			sourceTree = "<group>";
+		};
 		238F78692874B1A400E2FC1C = {
 			isa = PBXGroup;
 			children = (
@@ -626,6 +639,7 @@
 		23CCD9EC2874F35800301D8D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				23836EEF287886A6005BAF7F /* Empty Data */,
 				231A6C552875001D00E65541 /* Collection */,
 				231A6C562875002800E65541 /* Sport Event */,
 			);
@@ -760,6 +774,7 @@
 				232C03332877920A003FD7AA /* sport_event.json in Resources */,
 				232C032628777E93003FD7AA /* sports_empty.json in Resources */,
 				238F78822874B1A500E2FC1C /* LaunchScreen.storyboard in Resources */,
+				23836EF3287886C5005BAF7F /* DashboardEmptyViewTableViewCell.xib in Resources */,
 				238F787F2874B1A500E2FC1C /* Assets.xcassets in Resources */,
 				238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */,
 			);
@@ -883,6 +898,7 @@
 			files = (
 				23CCD9D42874CBA400301D8D /* HTTPGeneralRouterExtension.swift in Sources */,
 				23CCD9E02874D06000301D8D /* DashboardView.swift in Sources */,
+				23836EF2287886C5005BAF7F /* DashboardEmptyViewTableViewCell.swift in Sources */,
 				23CCD9DE2874D06000301D8D /* DashboardPresenter.swift in Sources */,
 				23CCD9E42874D09200301D8D /* IndexPathTools.swift in Sources */,
 				231A6C462874F56F00E65541 /* UIViewControllerExtensions.swift in Sources */,
