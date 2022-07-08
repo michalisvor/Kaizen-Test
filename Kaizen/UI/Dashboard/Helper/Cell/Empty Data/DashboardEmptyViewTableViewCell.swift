@@ -16,8 +16,8 @@ protocol DashboardEmptyViewTableViewCellDelegate: AnyObject {
 
 class DashboardEmptyViewTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var refreshButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var refreshButton: UIButton!
     
     weak var delegate: DashboardEmptyViewTableViewCellDelegate?
     

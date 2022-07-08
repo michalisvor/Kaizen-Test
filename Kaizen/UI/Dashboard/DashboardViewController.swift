@@ -33,7 +33,7 @@ class DashboardViewController: ExpandableTableViewController, ControllerType {
     private func setupPullToRefresh() {
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(refreshControllePulled), for: .valueChanged)
-        tableView.addSubview(refreshControl)
+        tableView.refreshControl = refreshControl
     }
     
     @objc private func refreshControllePulled(_ sender: UIRefreshControl) {

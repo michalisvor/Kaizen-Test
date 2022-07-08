@@ -54,6 +54,7 @@
 		237FDB9928763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 237FDB9728763E6800B4E4B1 /* KaizenCoreData.xcdatamodeld */; };
 		23836EF2287886C5005BAF7F /* DashboardEmptyViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23836EF0287886C5005BAF7F /* DashboardEmptyViewTableViewCell.swift */; };
 		23836EF3287886C5005BAF7F /* DashboardEmptyViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23836EF1287886C5005BAF7F /* DashboardEmptyViewTableViewCell.xib */; };
+		23836EF528789322005BAF7F /* DashboardEmptyViewTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23836EF428789322005BAF7F /* DashboardEmptyViewTableViewCellTests.swift */; };
 		238F78762874B1A400E2FC1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78752874B1A400E2FC1C /* AppDelegate.swift */; };
 		238F787A2874B1A400E2FC1C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F78792874B1A400E2FC1C /* SplashViewController.swift */; };
 		238F787D2874B1A400E2FC1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238F787B2874B1A400E2FC1C /* Main.storyboard */; };
@@ -132,6 +133,7 @@
 		237FDB9828763E6800B4E4B1 /* KaizenCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KaizenCoreData.xcdatamodel; sourceTree = "<group>"; };
 		23836EF0287886C5005BAF7F /* DashboardEmptyViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardEmptyViewTableViewCell.swift; sourceTree = "<group>"; };
 		23836EF1287886C5005BAF7F /* DashboardEmptyViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardEmptyViewTableViewCell.xib; sourceTree = "<group>"; };
+		23836EF428789322005BAF7F /* DashboardEmptyViewTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardEmptyViewTableViewCellTests.swift; sourceTree = "<group>"; };
 		238F78722874B1A400E2FC1C /* Kaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238F78752874B1A400E2FC1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238F78792874B1A400E2FC1C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				232C032F287790D5003FD7AA /* SportEventCollectionViewCellTests.swift */,
 				232C033728779CC1003FD7AA /* CollectionViewTableViewCellTests.swift */,
+				23836EF428789322005BAF7F /* DashboardEmptyViewTableViewCellTests.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -939,6 +942,7 @@
 				232C0330287790D5003FD7AA /* SportEventCollectionViewCellTests.swift in Sources */,
 				232C032028777BBD003FD7AA /* MockDecoder.swift in Sources */,
 				232C0306287738A4003FD7AA /* UIKitExtensionTests.swift in Sources */,
+				23836EF528789322005BAF7F /* DashboardEmptyViewTableViewCellTests.swift in Sources */,
 				237B948B28772F8700555B47 /* HTTPGeneralRouterTests.swift in Sources */,
 				237B948928772F4200555B47 /* RouterTestHelper.swift in Sources */,
 				232C03292877832A003FD7AA /* KaizenTimerTests.swift in Sources */,
