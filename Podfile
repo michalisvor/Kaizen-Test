@@ -3,15 +3,18 @@ platform :ios, '12.0'
 use_frameworks!
 inhibit_all_warnings!
 
-target 'Kaizen' do
-  pod 'SwiftLint', '0.47.0'
+def pods
   pod 'Alamofire'
   pod 'PromiseKit'
 end
 
+target 'Kaizen' do
+  pod 'SwiftLint', '0.47.0'
+  pods
+end
+
 target 'KaizenTests' do
-  pod 'Alamofire'
-  pod 'PromiseKit'
+  pods
 end
 
 post_install do |installer|

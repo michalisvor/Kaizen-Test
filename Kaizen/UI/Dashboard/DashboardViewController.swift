@@ -24,6 +24,7 @@ class DashboardViewController: ExpandableTableViewController, ControllerType {
         navigationItem.hidesBackButton = true
         navigationController?.setUpWithBlueBackgroundColor()
         navigationItem.rightBarButtonItem = UIBarButtonItem.imageItem(imageName: "icon_expand", target: self, action: #selector(expandAllTapped))
+        navigationItem.rightBarButtonItem?.isEnabled = false
         
         prepareNavigationTitle("Stoiximan")
         setupPullToRefresh()
@@ -32,7 +33,7 @@ class DashboardViewController: ExpandableTableViewController, ControllerType {
     private func setupPullToRefresh() {
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(refreshControllePulled), for: .valueChanged)
-        tableView.addSubview(refreshControl)
+        tableView.refreshControl = refreshControl
     }
     
     @objc private func refreshControllePulled(_ sender: UIRefreshControl) {
@@ -62,6 +63,9 @@ extension DashboardViewController {
         switch (cell, item.data) {
         case (let cell as CollectionViewTableViewCell, let data as [APIResponseSportEvent]):
             cell.setUp(with: data)
+        case (let cell as DashboardEmptyViewTableViewCell, let data as DashboardEmptyViewModel):
+            cell.setUp(with: data)
+            cell.delegate = self
         default:
             break
         }
@@ -102,6 +106,14 @@ extension DashboardViewController {
     }
 }
 
+extension DashboardViewController: DashboardEmptyViewTableViewCellDelegate {
+    
+    func didTapOnRefresh() {
+        reload([])
+        presenter.getEvents()
+    }
+}
+
 extension DashboardViewController: EventCategoryHeaderViewDelegate {
 
     func didTapOnArrow(in section: Int) {
@@ -124,4 +136,7 @@ extension DashboardViewController: KaizenTimerDelegate {
 
 extension DashboardViewController: DashboardViewType {
     
+    func shouldEnableExpandAll(_ value: Bool) {
+        navigationItem.rightBarButtonItem?.isEnabled = value
+    }
 }

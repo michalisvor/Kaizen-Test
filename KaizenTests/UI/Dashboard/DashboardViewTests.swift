@@ -12,6 +12,7 @@ class DashboardViewTests: UIViewController, DashboardViewType {
     var tableView: UITableView! = UITableView()
     var dataModel: IndexPathDataModel = IndexPathDataModel(sectionItems: [])
     var refreshControl: UIRefreshControl! = UIRefreshControl()
+    func shouldEnableExpandAll(_ value: Bool) {}
 }
 
 class DashboardViewTestsMock: XCTestCase {
@@ -20,6 +21,10 @@ class DashboardViewTestsMock: XCTestCase {
     
     override func setUp() {
         presenter = createPresenter()
+    }
+    
+    override func tearDown() {
+        presenter = nil
     }
     
     func createPresenter() -> DashboardPresenterTests {
@@ -35,7 +40,7 @@ class DashboardViewTestsMock: XCTestCase {
         let expectation = XCTestExpectation()
         presenter.getEvents()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             let sectionItems = self.presenter.view?.dataModel.sectionItems
             
             let child = sectionItems?[0].data as? APIResponseSport
@@ -49,29 +54,36 @@ class DashboardViewTestsMock: XCTestCase {
             expectation.fulfill()
         }
         
-        wait(for: [expectation], timeout: 2)
+        wait(for: [expectation], timeout: 0.4)
     }
     
-    // TODO: Add Empty view
     func testGetEventsFailure() {
-        let presenter = createPresenter()
+        let expectation = XCTestExpectation()
         presenter.service.generatorError = true
         presenter.getEvents()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            XCTAssertEqual(presenter.sports.count, 0)
-            XCTAssertEqual(presenter.view?.dataModel.items().count, 0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            XCTAssertEqual(self.presenter.sports.count, 0)
+            XCTAssertEqual(self.presenter.view?.dataModel.items().count, 1)
+                           
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 0.4)
     }
     
     func testGetEventsSuccfullyButEmpty() {
-        let presenter = createPresenter()
+        let expectation = XCTestExpectation()
         presenter.service.emptyResponse = true
         presenter.getEvents()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            XCTAssertEqual(presenter.sports.count, 0)
-            XCTAssertEqual(presenter.view?.dataModel.items().count, 0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            XCTAssertEqual(self.presenter.sports.count, 0)
+            XCTAssertEqual(self.presenter.view?.dataModel.items().count, 1)
+                           
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 0.4)
     }
 }
