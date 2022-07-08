@@ -16,7 +16,7 @@ release_1.4 - 8/7/22  | Final fixes after tests implemented
 
 ## Features
 
-Features                  | Description
+Features              | Description
 --------------------- | -------------
 Pull to refresh       | Pull to refresh to refresh data
 Save favourites       | Saving favourite event even after the user kills the app
@@ -36,7 +36,7 @@ Unit Tests            | Unit tests implementation
 ### Xcode
 
 The project is build with the latest version of xCode 13.4.1
-You should install pods opening terminal with rosetta
+You should open Xcode with rosetta if you have a M1 Mac
 
 ### CocoaPods
 
