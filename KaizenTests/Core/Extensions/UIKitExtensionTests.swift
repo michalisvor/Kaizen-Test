@@ -18,10 +18,10 @@ class UIViewControllerExtensionTests: XCTestCase {
     func testHideLoadingView() {
         let splashController = SplashViewController.instance()
         
-        splashController.showLoadingView()
+        splashController.showLoader()
         XCTAssertTrue(splashController.view.subviews.contains(where: { $0 is UIActivityIndicatorView }) )
 
-        splashController.hideLoadingView()
+        splashController.hideLoader()
         XCTAssertTrue(!splashController.view.subviews.contains(where: { $0 is UIActivityIndicatorView }) )
     }
     

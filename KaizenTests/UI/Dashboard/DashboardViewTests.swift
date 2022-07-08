@@ -16,6 +16,12 @@ class DashboardViewTests: UIViewController, DashboardViewType {
 
 class DashboardViewTestsMock: XCTestCase {
     
+    var presenter: DashboardPresenterTests!
+    
+    override func setUp() {
+        presenter = createPresenter()
+    }
+    
     func createPresenter() -> DashboardPresenterTests {
         let presenter = DashboardPresenterTests()
         presenter.service = DashboardServiceTests()
@@ -26,13 +32,24 @@ class DashboardViewTestsMock: XCTestCase {
     }
     
     func testGetEventsSuccfully() {
-        let presenter = createPresenter()
+        let expectation = XCTestExpectation()
         presenter.getEvents()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            XCTAssertEqual(presenter.sports.count, 8)
-            XCTAssertEqual(presenter.view?.dataModel.sectionItems.count, 8)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let sectionItems = self.presenter.view?.dataModel.sectionItems
+            
+            let child = sectionItems?[0].data as? APIResponseSport
+            let child2 = sectionItems?[1].data as? APIResponseSport
+
+            XCTAssertEqual(self.presenter.sports.count, 9)
+            XCTAssertEqual(self.presenter.view?.dataModel.numberOfSections, 8)
+            XCTAssertEqual(child?.events?.count, 5)
+            XCTAssertEqual(child2?.events?.count, 26)
+                           
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 2)
     }
     
     // TODO: Add Empty view

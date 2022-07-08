@@ -9,6 +9,8 @@ import XCTest
 
 class CoreDataManagerTests: XCTestCase {
     
+    var eventsCountBeforeAddingNew = 0
+    
     func createFavorite() {
         let event = APIResponseSportEvent()
         event.eventId = "2"
@@ -28,16 +30,20 @@ class CoreDataManagerTests: XCTestCase {
     }
     
     func testCoreDataDeleteFavorite() {
+        let expectation = XCTestExpectation()
         createFavorite()
 
-        let eventsCountBeforeAddingNew = CoreDataManager.shared.getFavoriteEvents().count
-        
-        CoreDataManager.shared.deleteFavoriteEvent(eventId: "2")
-        
-        let eventsCount = CoreDataManager.shared.getFavoriteEvents().count
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertEqual(eventsCount, eventsCountBeforeAddingNew - 1)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.eventsCountBeforeAddingNew = CoreDataManager.shared.getFavoriteEvents().count
+            CoreDataManager.shared.deleteFavoriteEvent(eventId: "2")
         }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let eventsCount = CoreDataManager.shared.getFavoriteEvents().count
+            XCTAssertEqual(eventsCount, self.eventsCountBeforeAddingNew - 1)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 2)
     }
 }
